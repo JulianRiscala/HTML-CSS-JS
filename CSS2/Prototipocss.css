@@ -7,7 +7,7 @@
     background-color: #91f0e8;
     border:3px groove rgb(44,72,99);
     border-right: 10px groove rgb(44, 72, 99);
-    position: absolute;
+    position: relative;
     width: 100%;
     display:flex
 }
@@ -20,6 +20,7 @@
     font-size: 14px;
     padding: 20px;
     border-right:5px groove rgb(44, 72, 99);
+    box-sizing: border-box;
 }
 
 .header__div-derecho{
@@ -27,6 +28,7 @@
     height: auto;
     display: inline-block;
     position: relative;
+    box-sizing: border-box;
 }
 
 .header h1{
@@ -49,4 +51,54 @@
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     text-shadow: 1px 1px 3px rgb(79, 150, 212);
+}
+
+
+
+
+/*Aca empezamos la parte responsive menu*/
+.nav__li-container{
+    display: none;
+}
+
+.nav{
+    background-color: rgb(44,72,99);
+}
+
+.nav__li{
+    display:inline-block;
+    padding:10px;
+    color: #fff; /*Esto seria para el iconito */
+}
+
+.nav__li:hover > a { /*Esto quiere decir que cuando pacemos por .nav__li, el cambio se produzca en el enlace a.*/
+    color:#aaa
+}
+
+.nav__li a{
+    color:white;
+    text-decoration: none;
+}
+
+.nav__responsive-button{
+    float:right;
+    font-size: 20px;
+    padding: 6px 20px;
+}
+
+@media only screen and (max-widht:700px){
+    .nav__ul{
+        display: none;
+    }
+    .nav__responsive-ul{
+        display: block;
+        position: absolute;
+        width: 100%;
+        background-color: rgb(79, 150, 212) ;
+    }
+}
+
+.nav{
+    height: 37px;
+    width: 100%;;
 }
