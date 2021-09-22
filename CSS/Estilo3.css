@@ -1,0 +1,42 @@
+﻿* {
+    font-family: Arial;
+}
+
+.caja1,.caja2,.caja3,.caja4{
+    width:120px;
+    height:120px;
+    display:block;
+}
+
+.caja1{
+    background-color:orange;
+}
+.caja2 {
+    background-color: green;
+    position:relative;
+    top:20px;
+    left:50px;
+}
+.caja3{
+    background-color:lightblue;
+    position:relative;
+}
+.caja4{
+    background-color:yellow;
+}
+
+.emergente{
+    position:fixed;
+    background-color:red;
+    margin-top:-50px;
+}
+
+.sticky{
+    position:sticky;
+    background-color:green;
+    top:15px;
+}
+
+.body-CSS3{
+    padding-top:50px;
+}

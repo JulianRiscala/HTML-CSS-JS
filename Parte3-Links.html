@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <header>
+        <h2>Indice</h2>
+        <nav>
+            <ul>
+                <li><a href="Inicio.html">Parte 1 - Inicio</a></li>
+                <li><a href="Parte2-Listas.html">Parte 2 - Listas</a></li>
+                <li><a href="Parte3-Links.html">Parte 3 - Links</a></li>
+                <li><a href="Parte4-Imagenes.html">Parte 4 - Imagenes</a></li>
+                <li><a href="Parte5-Tablas.html">Parte 5 - Tablas</a></li>
+                <li><a href="Parte6-Forms.html">Parte 6 - Forms</a></li>
+                <li><a href="Parte7-MarcadoAdicional.html">Parte 7 - Marcado adicional</a></li>
+                <li><a href="Parte8-Semantica.html">Parte 8 - Semantica HTML</a></li>
+                <li><a href="CSS/Parte9-CSS.html">Parte 9 - CSS</a></li>
+                <li><a href="CSS/Parte10-CSS-2.html">Parte 10 - CSS p2</a></li>
+                <li><a href="CSS/Parte11-CSS-3.html">Parte 11 - CSS p3</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr />
+    <h1 id="inicio">Links!</h1>
+    <h2>Los links son de gran utilidad para navegar dentro de la misma pagina, entre paginas del mismo proyecto o a otro dominio distinto. Siempre utilizaremos la etiqueta <b>a</b>.</h2>
+    <hr />
+    <p>Cuando se traten de URL absolutos, siempre se debe incluir el <i>https://</i> antes del www.</p>
+    <p>Links utiles:</p>
+    <ul>
+        <li><a href="https://www.youtube.com">Youtube</a></li>
+        <li><a href="https://www.primevideo.com/">Prime Video</a></li>
+        <li><a href="https://store.steampowered.com/?l=spanish">Steam</a></li>
+    </ul>
+    <hr />
+    <p>Para poner links de la misma carpeta, se denominar URL relativos, se coloca literal el nombre del elemento. Por ejemplo <i>Inicio.html</i>.</p>
+    <ul>
+        <li><a href="Inicio.html">Inicio</a></li>
+        <li><a href="Parte2-Listas.html">Listas</a></li>
+    </ul>
+    <hr />
+    <h2>Estructura de directorios</h2>
+    <ul>
+        <li>
+            ElClan
+            <ul>
+                <li>Inicio.html</li>
+                <li>
+                    Imagenes
+                    <ul>
+                        <li>Logo.gif</li>
+                    </ul>
+                </li>
+                <li>
+                    Productos
+                    <ul>
+                        <li>
+                            Mesadas
+                            <ul>
+                                <li>Inicio.html</li>
+                                <li>Granito-primera-calidad.html</li>
+                                <li>Granito-segunda-calidad.html</li>
+                                <li>Granitex.html</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Muebles
+                            <ul>
+                                <li>Inicio</li>
+                                <li>Alacenas.html</li>
+                                <li>Bajo-mesadas.html</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Servicios
+                    <ul>
+                        <li>Inicio.html</li>
+                        <li>Ventas-Mayor.html</li>
+                        <li>Construcciones.html</li>
+                        <li>Asesoracion.html</li>
+                    </ul>
+                </li>
+                <li>
+                    Contacto
+                    <ul>
+                        <li>Inicio.html</li>
+                        <li>Elio.html</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <h3>Estructura</h3>
+    <p>Este diagrama es una ayuda para organizar el proyecto, la carpeta <b><i>ElClan</i></b> es nuestra <b>root folder</b>. Todo lo que este dentro de esta carpeta contendra archivos para la pagina web.</p>
+    <h3>Relaciones</h3>
+    <p>Las relaciones dentro de los archivos y carpetas siguen las terminologias como arboles genealogicos. La carpeta <i>ElClan</i> es padre de <i>Inicio.html</i> y carpetas como <i>imagenes,productos,etc.</i> </p>
+    <h3>Paginas principales</h3>
+    <p>
+        Las paginas principales de un sitio html (y las paginas principales de cada seccion) son llamadas <b>Inicio.html</b> o <b>Index.html</b>.<br />
+        Los servicios web usualmente vuelven a la pagina principal si no esta especificado el <b>link</b>. <br />
+        Entonces si ponemos ElClan.com nos llevara a ElClan.com/Inicio.html.html.<br />
+        Y ElClan.com/Productos nos llevara hacia ElClan.com/Productos/Inicio.html.
+    </p>
+    <hr />
+    <h2>URLs relativos</h2>
+    <p>Utilizados para moverse entre links de tu propio dominio, son mas cortos que los URLs absolutos y tienen propieades que se deben respetar para poder moverse entre carpetas.</p>
+    <ul>
+        <li>
+            <b>Misma carpeta:</b> Solo se utiliza el nombre del archivo
+            <ul>
+                <li><i> a href="ejemplo.html">Ejemplo</i> </li>
+            </ul>
+        </li>
+        <li>
+            <b>Carpeta hija:</b> Se ingresa la carpeta hija -> / -> nombre del archivo
+            <ul>
+                <li><i> a href="Mesadas/Inicio.html">Inicio</i> </li>
+            </ul>
+        </li>
+        <li>
+            <b>Carpeta nieta:</b> Se ingresa carpeta nieta -> / -> carpeta hija -> / nombre del archivo
+            <ul>
+                <li><i> a href="Productos/Muebles/Inicio.html>Inicio</i></li>
+            </ul>
+        </li>
+        <li>
+            <b>Carpeta madre:</b> Se utiliza ../ para indicar que es una carpeta por encima.
+            <ul>
+                <li><i> a href="../Inicio.html>Inicio</i></li>
+            </ul>
+        </li>
+        <li>
+            <b>Carpeta abuela:</b> Se repite ../ para indicar que son dos carpetas por encima.
+            <ul>
+                <li><i> a href="../../Inicio.html>Inicio</i></li>
+            </ul>
+        </li>
+    </ul>
+    <p>El metodo <b>../</b> se puede repetir las veces necesarias para subir de carpeta. </p>
+    <hr />
+
+    <h2>Links hacia mails</h2>
+    <p>Luego de abrir la etiqueta podemos colocar href="<b>mailto:ejemplo@mail.com</b>">label. Podremos mandar un mail al mail <i>ejemplo</i>.</p>
+    <hr />
+
+    <h2>Abrir un link en una pestaña nueva</h2>
+    <p>Luego de colocar la referencia en la etiqueta, podemos poner <b>target="_blank"</b>, cerrar la etiqueta y el nuevo link se abrira en una nueva pestaña</p>
+    <p><a href="http://www.youtube.com" target="_blank">Youtube</a></p>
+    <hr />
+
+    <h2>Links a partes especificas de la misma pagina web</h2>
+    <p>
+        Es un recurso util para viajar entre las distintas secciones de la pagina web.<br />
+        Antes que nada debemos darle un <b>id</b> a la etiqueta que queramos linkear. Puede ser cualquier etiqueta HTML<br />
+        Se recomienda que las id empiecen con un guion bajo o una letra, NO un numero.<br />
+        Luego en la etiqueta del link, en el href se ingresa entre comillas el <b> # </b>+ <b>ID</b>
+    </p>
+    <a href="#inicio">Inicio de la pagina</a>
+    <br />
+    <p>
+        Tambien se puede linkear a partes especificas de OTRA pagina!<br />
+        Para hacer eso la href con la pagina web tiene que seguir asi: .com<b>/#inicioP1</b><br />
+        <a href="Inicio.html#inicioP1">Inicio de la pag 1</a>
+    </p>
+    <p>
+        PERO si no queremos poner el link absoluto y el archivo es parte del proyecto, en mi caso es <i>ejemplo</i>.html<br />
+        Debemos poner <b>href="Inicio.html#<i>id-ejemplo</i>"</b>. Osea, sin la barra /
+    </p>
+
+
+</body>
+</html>

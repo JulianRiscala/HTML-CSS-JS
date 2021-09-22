@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <link rel="stylesheet" type="text/css" href="Estilo2.css" />
+</head>
+<body>
+    <header>
+        <h2>Indice</h2>
+        <nav>
+            <ul>
+                <li><a href="Inicio.html">Parte 1 - Inicio</a></li>
+                <li><a href="Parte2-Listas.html">Parte 2 - Listas</a></li>
+                <li><a href="Parte3-Links.html">Parte 3 - Links</a></li>
+                <li><a href="Parte4-Imagenes.html">Parte 4 - Imagenes</a></li>
+                <li><a href="Parte5-Tablas.html">Parte 5 - Tablas</a></li>
+                <li><a href="Parte6-Forms.html">Parte 6 - Forms</a></li>
+                <li><a href="Parte7-MarcadoAdicional.html">Parte 7 - Marcado adicional</a></li>
+                <li><a href="Parte8-Semantica.html">Parte 8 - Semantica HTML</a></li>
+                <li><a href="Parte9-CSS.html">Parte 9 - CSS</a></li>
+                <li><a href="Parte10-CSS-2.html">Parte 10 - CSS p2</a></li>
+                <li><a href="Parte11-CSS-3.html">Parte 11 - CSS p3</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr />
+    <h1>CSS parte 2</h1>
+    <h2>Normalice</h2>
+    <p>
+        Las distancias entre margenes de textos, los br, todo lo que nosotros no midifiquemos, viene por defecto por el navegador.<br />
+        Esto es un problema cuando varios navegadores quieren abrir una pagina web que no esta preparada para funcionar en varios navegadores.<br />
+        Entonces nosotros podemos "normalizar" nuestra pagina web y que una hoja de estilo CSS se encargue de todo eso.<br />
+        Aca dejo el link para el archivo <a href="https://necolas.github.io/normalize.css/">normalize.</a><br />
+        Ahora lo que veo en este <a href="https://youtu.be/OWKXEJN67FE?t=4914">tutorial</a> es que cambia un par de cosas en el normalize que las dejo aca escritas para futuros usos?
+    </p>
+    <br />
+    <ul>
+        <li>Ir al selector de tipo <b>img</b> y agregar <b>max-width: 100%;</b>. Para que las imagenes en celulares se ajuste.</li>
+        <li>
+            Crear un selector universal * y agregar <b>box-sizing: border-box;</b>. Es por una cuestion de cajas que todavia no sé ¯\_(ツ)_/¯ pero es <b>importante.</b><br />
+            En este mismo selector agregamos <b>padding: 0;</b> y <b>margin: 0;</b>. Es mejor poner 0 sin medidas porque trabaja como un multiplicador. X * 0 = 0.
+        </li>
+    </ul>
+    <br />
+    <p>
+        Una vez hecho este proceso de normalize, ya podemos trabajar mas tranquilos y al 100% con CSS. <b>YA ME SACARON LOS PUNTOS DE LOS ITEMS DE LAS LISTAS Y ME PONGO RE MAL LOCO.</b>
+    </p>
+    <hr />
+
+    <h2>CAJAS</h2>
+    <p>
+        Esto es de HTML pero la verdad es que no lo estudie... Se que hay etiquetas que ocupan todo el ancho de la pantalla, y todo el ancho de la pantalla seria la etiqueta body, donde metemos todo.<br />
+        Es decir que una etiqueta h1, h2, p, etc ocupa todo el ancho de la pantalla, no se puede poner un h1 al lado de otro h1. Estos se llaman <b>ETIQUETAS EN BLOQUE</b><br />
+        Pero hay etiquetas que si se pueden poner al lado de la otra como la etiqueta b, i y otras que modifiquen el texto. <b>Y ESTOS SE LLAMAN ELEMENTO EN LINEA (inline)</b><br />
+    </p>
+    <p>
+        Ahora con CSS podemos hacer que estos elementos se comporten como nosotros queramos, en linea o en bloque. <br />
+        A las etiquetas en bloque podemos ponerles una propiedad <b>display</b> para que se conviertan en linea, con el atributo <b>inline.</b> Ejemplo abajo.
+    </p>
+    <h1 class="bloquealinea-form">Esto es un H1</h1>
+    <h2 class="bloquealinea-form">Esto es un H2</h2>
+    <h3 class="bloquealinea-form">Y esto es un H3 (F12 para comprobar)</h3>
+    <p class="parrafo-form">
+        Hay propiedades que se pueden aplicar a tipos de elementos en linea. <br />
+        Por ejemplo la propiedad <b>height</b> se puede aplicar a elementos en bloque. Un elemento p puede ocupar cierta altura sin tener que andar agregando saltos de lineas.<br />
+        igual que la propiedad <b>width</b> que puede aumentar el ancho sin tener que agregar mas caracteres. Este parrafo es un ejemplo.
+    </p>
+    <hr />
+    <h2>Display: inline-block</h2>
+    <p>
+        Esta propiedad permite a un elemento en linea, transformalo a un elemento en bloque PERO igual se le puede aplicar formatos para elementos en linea. Ya que como vimos mas arriba, hay propiedades que no se pueden aplicar a elementos en linea.
+    </p>
+    <hr />
+    <h2>Padding</h2>
+    <p>
+        El padding es la distancia entre el texto y su caja. Hay 4 paddings en total: izquierda, derecha, encima y por debajo. O left, right, top y bottom.<br />
+        Es una propiedad que podemos acortar. Aplicaremos esto en un H1.
+    </p>
+    <h1 class="h1-form">Hola</h1><br />
+    <h1 class="h1-formv2">Hola</h1>
+    <p>Tenemos varias maneras de aplicar esta propiedad :</p>
+    <ul>
+        <li>
+            <b>padding: 10px;</b> esto aplica el padding de 10 pixeles en los 4 sentidos.
+        </li>
+        <li>
+            <b>padding: 10px 20px;</b> esto aplica el padding de 10 pixeles en top y bottom, y despues 20 pixeles a left y right.
+        </li>
+        <li>
+            <b>padding: 10px 20px 15px 30px;</b> esto aplica el padding de 10 pixeles a top, 20 a right, 15 a bottom y 30 a left. Osea en sentido a las agujas del reloj. <b>Podemos omitir el ultimo numero y se aplicara el numero del medio a right y left.</b> Tambien podemos discriminar cada lado del padding con <b>padding-bottom, padding-left, etc.</b>
+        </li>
+    </ul>
+    <hr />
+    <h2>width y height</h2>
+    <p>
+        Bueno, usar estas propiedades junto a padding es medio raro... en el h1 de arriba tenemos <b>padding: 10px 50px, height: 100. width: 100px.</b><br />
+        <ul>
+            <li>
+                <b>SI TENEMOS EL box-sizing: border-box;</b> que asi esta por default en el normalize, el color de fondo quedaria cuadrado segun las medidas del height y el width.
+            </li>
+            <li>
+                <b>SI CAMBIAMOS A box-sizing: content-box;</b> el color ya no es cuadrado con las medidas de height y width, si no que toma en cuenta el padding y lo suma en 4 lados.<br />
+                Seria en total 120 de height y 200 de width. Ya que suma 10 en top/bottom y 50 a los costados
+            </li>
+        </ul>
+    </p>
+    <hr />
+    <hr />
+    <h2>Box model</h2>
+    <p>Es el modelo de las cajas. Son los 4 atributos que forman el box model y tienen un orden de jerarquia</p>
+    <ul>
+        <li>Content: que es el contenido y se puede modificar con la propiedad line-height</li>
+        <li>Padding</li>
+        <li>Border</li>
+        <li>Margin</li>
+    </ul>
+    <img src="Imagenes/Box Model.png" />
+    <hr />
+    <h2>Margin</h2>
+    <p>
+        El margen entre elementos se puede setear con la propiedad <b>margin</b>, clavo un ejemplo abajo. Ambos h1 tienen 10 de margin cada uno, pero la division entre ellos es un poco mayor porque se suman sus ambos margenes.<br />
+        Podemos usar <b>margin: auto</b> para centrar la caja en el eje X.
+    </p>
+    <h2>Bordes</h2>
+    <p>
+        Con <b>border</b> podemos aplicar los estilos de bordes que queramos, con 3 atributos, la medida, el tipo de borde y un color.<br />
+        Para redondear los bordes de los elementos podemos usar el atributo <b>border-radius</b>. Para que sea totalmente redondo tenemos que setearlo al 50%.
+    </p>
+    <h2>Box shadow</h2>
+    <p>
+        Podemos usar la propiedad <b>box-shadow</b> para agregarle sombra a la caja. Tiene 5 atributos:
+        <ul>
+            <li>Cuanto se mueve en eje X</li>
+            <li>Cuanto se mueve en eje Y</li>
+            <li>Tamaño del desenfoque</li>
+            <li>Cuanto borde (que generalmente es 0)</li>
+            <li>Color</li>
+        </ul>
+    </p>
+    <h2>Text shadow</h2>
+    <p>
+        Con la propiedad <b>text-shadow</b> podemos darle sobra al texto que esta dentro y consta de 4 atributos:
+        <ul>
+            <li>Cuanto se mueve en eje X</li>
+            <li>Cuanto se mueve en eje Y</li>
+            <li>Tamaño del desenfoque</li>
+            <li>Color</li>
+        </ul>
+        Ambas propiedades de shadow pueden intensificarse si en el codigo CSS agregamos una coma, se repite el codigo, coma y asi hasta finalizar con el punto y coma.
+    </p>
+    <h2>Rotacion</h2>
+    <p>Podemos usar la propiedad <b>transform: rotate(<i>grado</i>deg)</b> para rotar la caja.<br /><br /><br /></p>
+    <h1 class="h1-formv3">Hola 1</h1><h1 class="h1-formv3">Hola 2</h1>
+    <br /><br /><br /><br />
+    <hr />
+    <h2>Outline</h2>
+    <p>
+        <b>outline:</b> es una de esas propiedades que se pueden abreviar. Y lo que hace es generar un borde pero sin afectar a las demas cajas, es como un resaltador.
+        <br />Si nosotros le metemos un border, va a "chupar" lugar de la box.
+    </p>
+    <br />
+    <br />
+    <div class="caja1"></div>
+    <div class="caja2"></div>
+    <br />
+    <br />
+
+</body>
+</html>

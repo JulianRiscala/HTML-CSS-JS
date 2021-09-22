@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <header>
+        <h2>Indice</h2>
+        <nav>
+            <ul>
+                <li><a href="Inicio.html">Parte 1 - Inicio</a></li>
+                <li><a href="Parte2-Listas.html">Parte 2 - Listas</a></li>
+                <li><a href="Parte3-Links.html">Parte 3 - Links</a></li>
+                <li><a href="Parte4-Imagenes.html">Parte 4 - Imagenes</a></li>
+                <li><a href="Parte5-Tablas.html">Parte 5 - Tablas</a></li>
+                <li><a href="Parte6-Forms.html">Parte 6 - Forms</a></li>
+                <li><a href="Parte7-MarcadoAdicional.html">Parte 7 - Marcado adicional</a></li>
+                <li><a href="Parte8-Semantica.html">Parte 8 - Semantica HTML</a></li>
+                <li><a href="CSS/Parte9-CSS.html">Parte 9 - CSS</a></li>
+                <li><a href="CSS/Parte10-CSS-2.html">Parte 10 - CSS p2</a></li>
+                <li><a href="CSS/Parte11-CSS-3.html">Parte 11 - CSS p3</a></li>
+            </ul>
+        </nav>
+    </header><hr />
+    <h1>Tablas</h1>
+    <p><b>Organizacion</b></p>
+    <p>
+        La etiqueta <b>table</b> crea una tabla.<br />
+        Se habre una nueva fila con <b>tr</b>, y cada dato se ingresa con <b>td</b> <i>(data table) </i>que refiere a cada columna.
+    </p>
+    <p><ins>Aunque una celda no contenga informacion, se debe abrir y cerrar la etiqueta td para que se renderize bien la tabla.</ins> </p>
+
+    <table>
+        <tr>
+            <td>15</td>
+            <td></td>
+            <td>45</td>
+        </tr>
+        <tr>
+            <td>45</td>
+            <td>99999999</td>
+            <td>135</td>
+        </tr>
+        <tr>
+            <td>80</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+    </table>
+    <p>Los datos mas grandes van a acomodar todos los demas para que quede todo alineado.</p>
+    <hr />
+    <h2>Titulos para columnas y filas</h2>
+    <p>Con la etiqueta <b>th</b> podemos poner titulos, es lo mismo que td pero ayuda/guia para identificar en el codigo los titulos de filas y columnas.</p>
+    <p>Se puede agregar una propiedad <b>scope</b> para identificarlos mas facil.</p>
+    <table>
+        <tr>
+            <th></th>
+            <th scope="col">Luz</th>
+            <th scope="col">Gas</th>
+            <th scope="col">Agua</th>
+        </tr>
+        <tr>
+            <th scope="row">Pago adelantado:</th>
+            <td>$2000</td>
+            <td>$700</td>
+            <td>$3000</td>
+        </tr>
+        <tr>
+            <th scope="row">Pago atrasado:</th>
+            <td>$2300</td>
+            <td>$1200</td>
+            <td>$4000</td>
+        </tr>
+    </table>
+    <hr />
+    <h2>Ocupar varias celdas</h2>
+    <p>
+        Luego de abrir la etiqueta td, podemos usar la propiedad <b>colspan="<i>cantidad</i>"</b> para ocupar varios espacios de columnas.<br />
+        O la propiedad <b>rowspan="<i>numero</i>"</b> para hacer lo mismo pero con filas.
+    </p>
+
+    <table>
+        <tr>
+            <th></th>
+            <th scope="col">Lunes</th>
+            <th scope="col">Martes</th>
+            <th scope="col">Miercoles</th>
+            <th scope="col">Jueves</th>
+            <th scope="col">Viernes</th>
+        </tr>
+        <tr>
+            <th scope="row">8:00 </th>
+            <td>Matematicas</td>
+            <td rowspan="2">Historia</td>
+            <td>Filosofia</td>
+            <td>Arte</td>
+            <td>Matematicas</td>
+        </tr>
+        <tr>
+            <th scope="row">9:00 </th>
+            <td>Arte</td>
+            <td>Naturales</td>
+            <td>Sociales</td>
+            <td>Portugues</td>
+        </tr>
+        <tr>
+            <th scope="row">10:00 </th>
+            <td rowspan="2" colspan="4"> Recreo</td>
+            <td>Matematicas</td>
+        </tr>
+        <tr>
+            <th scope="row">11:00 </th>
+            <td>Hora libre</td>
+        </tr>
+    </table>
+    <p>En el ejemplo "recreo" ocupa 4 columnas y 2 filas, pero como esta alineado a la izquierda, y no hay sombras, no se ve tanto.</p>
+    <hr />
+    <h2>Tablas laaaaaargas</h2>
+    <p>Hay 3 elementos que pueden ayudar a distinguir el contenido de las tablas. A parte que facilitan el uso de CSS.</p>
+    <h3>thead</h3>
+    <p>Los titulos superiores de las tablas se meten en el elemento <b>thead</b>.</p>
+    <h3>tbody</h3>
+    <p>El cuerpo entero de la tabla debe estar dentro del <b>tbody</b>.</p>
+    <h3>tfoot</h3>
+    <p><b>"Pie de pagina"</b> pertenece al <b>tfoot</b></p>
+    <p>El tfoot puede usarse como una suma total de los elementos del body por ejemplo.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Dia</th>
+                <th>Ingresos</th>
+                <th>Egresos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Lunes</th>
+                <td>600</td>
+                <td>500</td>
+            </tr>
+            <tr>
+                <th>Martes</th>
+                <td>2000</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <th>Miercoles</th>
+                <td>800</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <th>Jueves</th>
+                <td>1200</td>
+                <td>750</td>
+            </tr>
+            <tr>
+                <th>Viernes</th>
+                <td>0</td>
+                <td>600</td>
+            </tr>
+            <tr>
+                <th>Sabado</th>
+                <td>3200</td>
+                <td>500</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td>18800</td>
+                <td>3350</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

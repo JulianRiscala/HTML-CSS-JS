@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <header>
+        <h2>Indice</h2>
+        <nav>
+            <ul>
+                <li><a href="Inicio.html">Parte 1 - Inicio</a></li>
+                <li><a href="Parte2-Listas.html">Parte 2 - Listas</a></li>
+                <li><a href="Parte3-Links.html">Parte 3 - Links</a></li>
+                <li><a href="Parte4-Imagenes.html">Parte 4 - Imagenes</a></li>
+                <li><a href="Parte5-Tablas.html">Parte 5 - Tablas</a></li>
+                <li><a href="Parte6-Forms.html">Parte 6 - Forms</a></li>
+                <li><a href="Parte7-MarcadoAdicional.html">Parte 7 - Marcado adicional</a></li>
+                <li><a href="Parte8-Semantica.html">Parte 8 - Semantica HTML</a></li>
+                <li><a href="CSS/Parte9-CSS.html">Parte 9 - CSS</a></li>
+                <li><a href="CSS/Parte10-CSS-2.html">Parte 10 - CSS p2</a></li>
+                <li><a href="CSS/Parte11-CSS-3.html">Parte 11 - CSS p3</a></li>
+                <li><a href="../CSS2/Parte12-Display.html">Parte 12 - Display</a></li>
+                <li><a href="../CSS2/Parte13-MenuResponsive.html">Parte 13 - Menu responsive</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr />
+    <h1 id="inicioP1">Mi introduccion a HTML</h1> <!--El titulo mas grande de la pagina-->
+    <h2>Inicio sobre formato basico sobre HTML</h2> <!--Subtitulo 1-->
+    <p>
+        Este es el inicio de mi camino como programador fullstack.
+        La verdad es que la parte mas divertida es el back; recoleccion, proceso y distribucion ordenada de datos (creo?).
+        Pero primero hay que empezar con html y como se utilizan los controles, si no empiezo con esto, no voy a llegar a mucho.
+    </p>
+    <p>Acabo de aprender que si o si necesito colocar un 'br' para hacer un salto de linea, pero no es necesario cuando separo el codigo en parrafos. Como hice recien.</p>
+    <p>
+        Asi quedaria el texto anterior si hubiese usado la etiqueta br: <br />Este es el inicio de mi camino como programador fullstack.<br />
+        La verdad es que la parte mas divertida es el back; recoleccion, proceso y distribucion ordenada de datos (creo?).<br />
+        Pero primero hay que empezar con html y como se utilizan los controles, si no empiezo con esto, no voy a llegar a mucho.<br />
+    </p>
+    <p>Para ingresar tabulaciones debemos utilziar &nbsp seguido de un ; varias veces para conseguir una tabulacion.</p>
+    <hr />
+
+    <h2>Bold e Itelic. ctrl N y K del word noma</h2>
+    <p>
+        Se puede poner la letra en <b>negrita</b> o en <i>cursiva</i> con las etiquetas b o i respectivamente.<br />
+        Pueden llegar a darle un poco de <b>importancia</b> a una palabra, tambien se puede.... <b><i>MEZCLAR! (creo)</i></b> Si, se puede.<br />
+    </p>
+    <hr />
+
+    <h2>Superíndice y subíndice</h2>
+    <p>
+        Las etiquetas <b>sup</b> (superíndice) y <b>sub</b> (subíndice) se pueden utilizar... para... <br />
+        Bueno la etiqueta sup para mostrar numeros con potencias, tipo 2<sup>2</sup> = 4. Ojo.<br />
+        Y la etiqueta sub ni idea, asi que voy a usar el ejemplo del manual: <i>The amount of CO<sub>2</sub> in the atmosphere grew by 2ppm in 2009<sub>1</sub>. </i>
+    </p>
+    <hr />
+
+    <h2>Salto entre lineas</h2>
+    <p>
+        Bueno, sabemos que para saltos entre lineas se debe usar la etiqueta <b>br</b>. <br />
+        Esta etiqueta pertenece al tipo de <b>etiquetas vacias.</b> Pero para dar un salto entre lineas con la intencion de cambiar de tema debemos usar la etiqueta hr (lo ideal es cerrar el parrafo primero).
+    </p>
+    <hr />
+    <p>Este fue un ejemplo aunque es el mismo tema...</p>
+    <hr />
+
+    <h2>Margen semántico</h2>
+    <h3>Strong</h3>
+    <p>A veces debemos darle enfasis (con la etiqueta<b>strong</b>) al texto que estamos escribiendo, <strong>la etiqueta strong indica la importancia del texto dandole un formato en negrita</strong></p>
+    <h3>Emphasis</h3>
+    <p>La etiqueta <b>em</b> realiza un cambio muy <em>sutil a la oracion.</em> Como podras notar, hace el mismo efecto tipo cursiva.</p>
+    <hr />
+
+    <h2>Abreviaciones y acronismos</h2>
+    <p>La etiqueta <b>abbr</b> se utiliza con un titulo que sea la palabra completa. EJEMPLO: <abbr title="Profesor">Prof.</abbr> Julian.</p>
+    <hr />
+
+    <h2>Citas y definiciones</h2>
+    <p>Podemos usar la etiqueta <b>cite</b> para referirnos a citas sobre paginas webs o libros tal como:</p>
+    <p><cite>La Guia de la Vida</cite> por Bart Simpson a salvado <b>millones</b> de personas de la depresion gracias a sus trucazos.</p>
+    <p>Tambien existe la etiqueta <b>dfn</b> para explicar una nueva terminologia:</p>
+    <p>La <dfn>yerba mate</dfn> es una especie Árbol neotropical originaria de las cuencas del Alto Río Paraná, Alto Río Uruguay y algunos afluentes del Río Paraguay​.</p>
+    <hr />
+
+    <h2>Detalles del autor</h2>
+    <p>
+        La etiqueta <b>address</b> tiene un uso especifico: contener los detalles de contanto del autor sobre una obra, tambien numeros de telefonos o direcciones de mail.<br />
+        El uso de la etiqueta address es la siguiente: ->Address ->p ->a href=<i>"mailto: direccion de mail o pagina web.</i> -> cierro a -> cierro p y sigo en otro ->p.
+    </p>
+
+    <address>
+        <p><a href="mailto:julianriscalatrullas97@hotmail.com">julianriscalatrullas97@hotmail.com</a></p>
+        <p>Tigre, Buenos Aires.</p>
+    </address>
+    <hr />
+
+    <h2>Cambios de contenido</h2>
+    <p>La etiqueta <b>del</b> tacha el contenido que este dentro y la etiqueta <b>ins</b> lo subraya. Estas etiquetas se usan idealmente cuando una parte del documento fue eliminado para ingresar otra cosa:</p>
+    <p><i>La epoca nazi fue lo <del>mejor</del> <ins>peor</ins> que se vivio en el siglo XX.</i></p>
+    <p>Y la etiqueta <b>S</b> se utiliza cuando se quiere mostrar algo ya no es relevante actualmente. Tacha el contenido igual que <b>del</b> pero es otro uso:</p>
+    <p>Entrada al cine: <s>$300</s> actualmente $250.</p>
+    <hr />
+    <h1>Este fue el fin de la introducción, en el <a href="Parte2-Listas.html">siguiente capítulo</a> veremos listas!</h1>
+
+
+</body>
+</html>

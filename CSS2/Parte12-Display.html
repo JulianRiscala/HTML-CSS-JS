@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../CSS/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="Parte12.css" />
+</head>
+<body>
+    <h2>Display</h2>
+    <p>Para este momento ya deberiamos tener en cuenta que hay varios tipos de elementos con display: block, inline y la mezcla inline-block.<br />
+    Que los blocks son en bloque, ocupan todo el ancho.<br />
+    Que inline son en linea, que ocupan solo lo que tengan en el contenido.<br />
+    Y despues inline-block son la mezcla, podemos darle tamaños, posiciones e inclusive pueden no tener nada dentro.</p>
+    <hr />
+    <h2>Overflow</h2>
+    <p>Con el <b>overflow</b> podemos crear cuadros con texto dentro, y que si el texto excede del tamaño del cuadro o caja, tenga un scroll incluido para bajar por el contenido.</p>
+    <ul>
+        <li>De base esta en <b>inherit</b></li>
+        <li>Podemos colocar <b>auto</b> para que podamos scrolear por la caja</li>
+        <li>Y <b>scroll</b> si a si pone la barra para scrolear, a diferencia de auto que primero detecta la necesidad de una.</li>
+        <li><b>overflow-y:auto</b> seria lo mismo que overflow auto.</li>
+    </ul>
+    <div class="div1">
+        <p>
+            En el principio creó Dios los cielos y la tierra.
+            2Y la tierra estaba desordenada y vacía, y las tinieblas estaban sobre la faz del abismo, y el Espíritu de Dios se movía sobre la faz de las aguas.
+            3Y dijo Dios: Sea la luz; y fue la luz.
+            4Y vio Dios que la luz era buena; y separó Dios la luz de las tinieblas.
+            5Y llamó Dios a la luz Día, y a las tinieblas llamó Noche. Y fue la tarde y la mañana un día.
+            6Luego dijo Dios: Haya expansión en medio de las aguas, y separe las aguas de las aguas.
+            7E hizo Dios la expansión, y separó las aguas que estaban debajo de la expansión, de las aguas que estaban sobre la expansión. Y fue así.
+            8Y llamó Dios a la expansión Cielos. Y fue la tarde y la mañana el día segundo.
+            9Dijo también Dios: Júntense las aguas que están debajo de los cielos en un lugar, y descúbrase lo seco. Y fue así.
+            10Y llamó Dios a lo seco Tierra, y a la reunión de las aguas llamó Mares. Y vio Dios que era bueno.
+            11Después dijo Dios: Produzca la tierra hierba verde, hierba que dé semilla; árbol de fruto que dé fruto según su género, que su semilla esté en él, sobre la tierra. Y fue así.
+            12Produjo, pues, la tierra hierba verde, hierba que da semilla según su naturaleza, y árbol que da fruto, cuya semilla está en él, según su género. Y vio Dios que era bueno.
+            13Y fue la tarde y la mañana el día tercero.
+            14Dijo luego Dios: Haya lumbreras en la expansión de los cielos para separar el día de la noche; y sirvan de señales para las estaciones, para días y años,
+            15y sean por lumbreras en la expansión de los cielos para alumbrar sobre la tierra. Y fue así.
+            16E hizo Dios las dos grandes lumbreras; la lumbrera mayor para que señorease en el día, y la lumbrera menor para que señorease en la noche; hizo también las estrellas.
+            17Y las puso Dios en la expansión de los cielos para alumbrar sobre la tierra,
+            18y para señorear en el día y en la noche, y para separar la luz de las tinieblas. Y vio Dios que era bueno.
+            19Y fue la tarde y la mañana el día cuarto.
+            20Dijo Dios: Produzcan las aguas seres vivientes, y aves que vuelen sobre la tierra, en la abierta expansión de los cielos.
+            21Y creó Dios los grandes monstruos marinos, y todo ser viviente que se mueve, que las aguas produjeron según su género, y toda ave alada según su especie. Y vio Dios que era bueno.
+            22Y Dios los bendijo, diciendo: Fructificad y multiplicaos, y llenad las aguas en los mares, y multiplíquense las aves en la tierra.
+            23Y fue la tarde y la mañana el día quinto.
+            24Luego dijo Dios: Produzca la tierra seres vivientes según su género, bestias y serpientes y animales de la tierra según su especie. Y fue así.
+            25E hizo Dios animales de la tierra según su género, y ganado según su género, y todo animal que se arrastra sobre la tierra según su especie. Y vio Dios que era bueno.
+            26Entonces dijo Dios: Hagamos al hombre a nuestra imagen, conforme a nuestra semejanza; y señoree en los peces del mar, en las aves de los cielos, en las bestias, en toda la tierra, y en todo animal que se arrastra sobre la tierra.
+            27Y creó Dios al hombre a su imagen, a imagen de Dios lo creó; varón y hembra los creó.
+            28Y los bendijo Dios, y les dijo: Fructificad y multiplicaos; llenad la tierra, y sojuzgadla, y señoread en los peces del mar, en las aves de los cielos, y en todas las bestias que se mueven sobre la tierra.
+            29Y dijo Dios: He aquí que os he dado toda planta que da semilla, que está sobre toda la tierra, y todo árbol en que hay fruto y que da semilla; os serán para comer.
+            30Y a toda bestia de la tierra, y a todas las aves de los cielos, y a todo lo que se arrastra sobre la tierra, en que hay vida, toda planta verde les será para comer. Y fue así.
+            31Y vio Dios todo lo que había hecho, y he aquí que era bueno en gran manera. Y fue la tarde y la mañana el día sexto.
+        </p>
+    </div>
+    <hr />
+    <div class="div2">
+        <img src="https://elcomercio.pe/resizer/pftw_frkrC5V6L3kmRPoSBLObZQ=/980x0/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/NFZ7N7B7YVEINGAJOXK3TLNFH4.jpg" />
+    </div>
+    <h2>Float</h2>
+    <div class="float">
+        <img src="https://www.oas.org/ext/Portals/14/EasyDNNnews/1892/Image.jpg" />
+        Un uso que podemos darle a la propiedad <b>float</b> es darle una imagen articulo a un div.<br /> Para hacer este efecto, primero va la img dentro del div, y luego el texto pero suelto, sin estar dentro de un parrafo ni nada!
+    </div>
+    <hr />
+    <h2>Pseudo-Elementos</h2>
+    <p>
+        Tenemos 2 pseudo-elementos que podemos aplicar en cualquier tipo de elemenos <b>MENOS INLINE</b>. y deben seguir del elemento en css con ::  .<br />
+        <ul>
+            <li><b> - ::first-letter</b> aplica propiedades a la primera letra del texto.</li>
+            <li><b> - ::first-line</b> hace lo mismo pero a la primera linea del texto, nomas si se hace mas chica la pantalla, la primera linea puede variar.</li>
+            <li><b> - ::placeholder</b> funciona para cuando los inputs tienen un texto de fondo antes de escribir algo, con esta pseudo-propiedad cambiamos el formato de ese texto.</li>
+            <li><b> - ::selection</b> aplica propiedades cuando seleccionamos partes del texto.</li>
+            <li><b> - ::after</b> es de elementos de hijos, si o si necesita un padre porque no forma parte del dom.</li>
+            <li><b> - ::before</b> funciona de la misma manera, ambos pseudo-elementos deben contener un <i>content</i>.</li>
+        </ul>
+    </p>
+    <div class="pelementos">
+        a
+    </div>
+    <hr />
+    <h2>Pseudo-Clases</h2>
+    <p>
+        <ul>
+            <li> - Tenemos <b>:hover</b> que ya sabemos que hace, se activa cuando pasamos el mouse por encima del elemento.</li>
+            <li> - Tambien <b>:link</b> hace que los links que pongamos con elemento <i>a</i> que nunca se visitaron, tengan un color o propiedad en particularidad.</li>
+            <li> - Y <b>:visited</b> permite cambiar las propiedades de links que ya visitamos.</li>
+            <li> - <b>:active</b> permite que se apliquen elementos cuando mantenemos el click sobre el elemento. Por ejemplo mantener el click para que se visualize una animacion.</li>
+            <li> - <b>:focus</b> este funciona para inputs y aplica propiedades cuando seleccionamos el input.</li>
+            <li> - <b>:lang(<i>abreviacion de un lenguaje</i>)</b> aplica las propiedades siempre y cuando en el html hayamos definido con lang="<i>abreviacion de un lenguaje</i>". Casi nunca se usa.</li>
+        </ul>
+    </p><hr />
+    <h2>Object fix</h2>
+    <p>
+        La propiedad <b>object-fit</b> define a un elemento (foto o video) por como debe responder al height y width de la caja contenedora. Nos permite controlar como queremos que la imagen se ajuste a la caja.<br />
+        Y tiene varios valores:
+        <hr />
+        Aca una imagen de modelo 350px X 350px:<br />
+        <img src="../Imagenes/wallhaven-4y267l_350x350.png" style="margin:25px;"/>
+        <hr />
+        <ul>
+            <li>
+                - <b>fill</b> es el value default, estira la imagen para llenar la caja contendora. Podemos apreciar como la imagen se distorciona para llenar a la caja.
+                <br />
+                <div class="objectfix">
+                    <img class="objectfix-foto1" src="../Imagenes/wallhaven-4y267l_350x350.png" />
+                </div>
+            </li>
+            <li>
+                - <b>contain</b> incrementa o disminuye el tamaño de la imagen para llenar la caja preservando su relacion de aspecto (aspect-ratio) original
+                <br />
+                <div class="objectfix">
+                    <img class="objectfix-foto2" src="../Imagenes/wallhaven-4y267l_350x350.png" />
+                </div>
+            </li>
+            <li>
+                - <b>cover</b> la imagen tapa toda la caja contenedora pero al mantener su aspect-ratio, puede verse recortada la imagen. La diferencia con contain, es que contain cubre ancho o alto de la caja, pero puede sobrar espacio en blanco sobre la caja.<br />
+                En este ejemplo tenemos la propiedad <b>object-position:right;</b> para mostrar el lado derecho de la imagen.
+                <br />
+                <div class="objectfix">
+                    <img class="objectfix-foto3" src="../Imagenes/wallhaven-4y267l_350x350.png" />
+                </div>
+            </li>
+            <li>
+                - <b>none</b> hará que la imagen ignore las medidas de la caja y se muestre en su resolucion original.<br />
+                <div style="margin:auto;margin-top:25px;margin-bottom:25px;width:200px;height:200px;">
+                    <img class="objectfix-foto4" src="../Imagenes/wallhaven-4y267l_350x350.png" />
+                </div>
+            </li>
+            <li>
+                - <b>scale-down</b> lo que hace es comparar entre none y contain, y se queda con la resolucion mas chica.<br />
+                <div class="objectfix">
+                    <img class="objectfix-foto5" src="../Imagenes/wallhaven-4y267l_350x350.png" />
+                </div>
+            </li>
+        </ul>
+    </p>
+    <hr />
+    <h2>Object position</h2>
+    <p>Este atributo nos permite posicionar la imagen y determinar que lado preferimos mostrar. Mirar cover mas arriba.</p>
+    <hr />
+    <h2>Cursos</h2>
+    <p>Esta propiedad nos permite xcambiar el cursos en tales circustancias. Es mejor mirar en internet una lista de los cursores y se lo podemos aplicar a cajas.</p>
+
+
+</body>
+</html>|

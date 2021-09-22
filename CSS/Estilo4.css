@@ -1,0 +1,27 @@
+﻿.caja5, .caja6, .caja7 {
+    width: 120px;
+    height: 120px;
+    display: block;
+}
+
+
+.contenedor {
+    margin: 50px;
+}
+
+.caja5 {
+    background-color: red;
+}
+
+.caja6 {
+    background-color: blue;
+    color: white;
+    position: absolute;
+    /*    opacity:.8;*/
+    /*top:0;*/
+    margin-left: 50px;
+}
+
+.caja7 {
+    background-color: saddlebrown;
+}

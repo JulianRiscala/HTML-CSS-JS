@@ -1,0 +1,73 @@
+﻿/**{
+    padding: 0px;
+    margin: 0px;
+}*/
+
+/*h1{
+    color:lightgreen;
+}*/
+
+
+
+button:hover{
+    color:red;
+}
+
+.listaselectores{
+    color:chocolate;
+}
+
+.listaselectores dt {
+    color: cadetblue
+}
+
+#id-estructurabasica{
+    color:dodgerblue;
+}
+
+[atributoinventado="salsa"]{
+    color:darksalmon;
+}
+
+/*Codigo content metolodia BEM*/
+
+.articulo-form {
+    background-color:lightgrey;
+    font-size: 20px;
+}
+.articulo-form__h1{
+    color:red;
+    border-color:yellow;
+}
+.articulo-form__h2{
+    color:dodgerblue;
+}
+.articulo-form__p{
+    color:black;
+}
+.articulo-form__p--importante{
+    color:red;
+}
+.articulo-form__input--nombre{
+    color:black;
+}
+.articulo-form__input:hover{
+    color:red;
+}
+
+/*Dibujos*/
+.dibujito{
+    padding: 0px;
+    margin: 0px;
+
+}
+.dibujito__h1--1{
+    font-size:25px;
+    background-color:black;
+    width:100vw;
+}
+
+.otraletra-form__p {
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+}

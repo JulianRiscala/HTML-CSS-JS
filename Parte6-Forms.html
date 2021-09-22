@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <header>
+        <h2>Indice</h2>
+        <nav>
+            <ul>
+                <li><a href="Inicio.html">Parte 1 - Inicio</a></li>
+                <li><a href="Parte2-Listas.html">Parte 2 - Listas</a></li>
+                <li><a href="Parte3-Links.html">Parte 3 - Links</a></li>
+                <li><a href="Parte4-Imagenes.html">Parte 4 - Imagenes</a></li>
+                <li><a href="Parte5-Tablas.html">Parte 5 - Tablas</a></li>
+                <li><a href="Parte6-Forms.html">Parte 6 - Forms</a></li>
+                <li><a href="Parte7-MarcadoAdicional.html">Parte 7 - Marcado adicional</a></li>
+                <li><a href="Parte8-Semantica.html">Parte 8 - Semantica HTML</a></li>
+                <li><a href="CSS/Parte9-CSS.html">Parte 9 - CSS</a></li>
+                <li><a href="CSS/Parte10-CSS-2.html">Parte 10 - CSS p2</a></li>
+                <li><a href="CSS/Parte11-CSS-3.html">Parte 11 - CSS p3</a></li>
+            </ul>
+        </nav>
+    </header><h1>Forms</h1>
+    <p>
+        Los formularios HTML son elementos de las páginas web que nos sirven para recuperar información del usuario y enviarla al servidor para que pueda ser procesada.<br />
+        <a href="http://www.manualweb.net/html/formularios-html/">Fuente</a>
+    </p>
+    <h2>Estructura de forms</h2>
+    <p>Se habre la etiqueta <b>form</b> y siempre lleva un atributo <b>action</b>, usualmente lleva un <b>attribute</b> y un <b>id</b>.</p>
+    <p>SE PUEDEN SUMAR ATRIBUTOS Y ME DI CUENTA DESPUES DE APRENDER CSS.......... Solo basta con darle un nombre de atributo y listo.</p>
+    <p>
+        El metodo puede ser uno de dos: <b>get</b> o <b>post</b>.<br />
+        Con el metodo get, los valores del form son añadidos al final del URL especificado al atributo action.<br />
+        Ideales para:
+    </p>
+    <ul>
+        <li>Fomrs cortos (como "search boxes")</li>
+        <li>Cuando obtienes data del servidor web, y no añadiendola o borrando de la data base</li>
+    </ul>
+    <p>
+        Y con el metodo post, los valores son mandados atraves de lo que conocemos como los HTTP headers.<br />
+        Ideales para:
+    </p>
+    <ul>
+        <li>Permitir al usuario a subir archivos.</li>
+        <li>Contener informacion sensible (como passwords)</li>
+        <li>Añade o elimina informacion de la data base.</li>
+    </ul>
+    <p>Si el form no tiene un method, la data sera mandada usando el metodo get.</p>
+    <p>El <b>id</b> es usado para identificar el form y distinguirlo por otros elementos de la pagina web.</p>
+    <hr />
+
+    <h2>Text input</h2>
+    <p>
+        La etiqueta <b>input</b> se utiliza para crear distintos tipos de controles, el atributo <b>type</b> determina que tipo de input es creado.<br />
+        <b>type="text"</b> crea un espacio para una sola linea de texto.
+    </p>
+    <h3>Name</h3>
+    <p>
+        <b>name</b> es el atributo que le indica al servidor que form contiene cada pedazo de data que se ingresa.<br />
+        Todo control requiere un atributo name.
+    </p>
+    <h3>maxlength</h3>
+    <p>El atributo <b>maxlength</b> setea un numero limite de caracteres que puede tener el control.</p>
+
+    <form action="Parte6-Forms.html">
+        <p>
+            Nombre de usuario:
+            <input type="text" name="NombreUsuario" maxlength="12" />
+        </p>
+    </form>
+    <hr />
+
+    <h2>Password input</h2>
+    <p>
+        <b>type="password"</b> crea un espacio de una sola linea de texto, pero los caracteres son ocultos para el ingreso de contraseñas.<br />
+        <i>Este tipo de controles no son del todo seguros, no se recomienda utilizar este control. Para full seguridad se recomienda utilizar Secure Sockets Layer (SSL).</i><br />
+        De vuelta debemos usar el atributo name, y podemos utilizar el atributo maxlength.
+    </p>
+
+    <form action="Parte6-Forms.html">
+        <p>
+            Nombre de usuario:
+            <input type="text" name="NombreUsuario" maxlength="12" />
+        </p>
+        <p>
+            Contraseña:
+            <input type="password" name="Contraseña" maxlength="10" />
+        </p>
+    </form>
+    <hr />
+
+    <h2>Area de texto</h2>
+    <p>
+        El elemento <b>textarea</b> se utiliza para ingresar linea multi linea, entre las etiquetas donde es creado, podemos ingresar un texto pre determinado donde el usuario coloca lo que quiera.<br />
+        Si el texto no es eliminado, se envia por el servidor asi como está.
+    </p>
+
+    <form action="Parte6-Forms.html">
+        <p>Ingresar comentarios adicionales:</p>
+        <textarea name="Comentarios">Comentarios...</textarea>
+    </form>
+    <hr />
+    <h2>Radio button</h2>
+    <p><b>type="radio"</b> permite al usuario elegir entre varios elementos.</p>
+    <p>El atributo <b>name</b> debe ser iguales en todos los radio buttons, este es el atributo que viaja al servidor con el <b>value</b> que es asignado por el usuario. </p>
+    <p><b>value</b> es el valor asignado que viaja al servidor, es la opcion elegida. Lo que ve el usuario.</p>
+    <p><b>checked</b> es el atributo para indicar que opcion esta indicada predeterminadamente. SI O SI UNO DEBE SER ELEGIDO.</p>
+
+    <form action="Parte6-Forms.html">
+        <p>
+            Ingresar una opcion:<br />
+            <input type="radio" name="opcion" value="rock" checked="checked" /> Rock<br />
+            <input type="radio" name="opcion" value="jazz" /> Jazz<br />
+            <input type="radio" name="opcion" value="pop" /> Pop <br />
+            <input type="radio" name="opcion" value="cumbia" /> Cumbia
+        </p>
+    </form>
+    <hr />
+    <h2>Checkbox</h2>
+    <p><b>type="checkbox"</b> permite seleccionar o deseleccionar opciones. Las <b>propiedades</b> se manejan de la misma manera que los radio button, mismo <b>name</b>, distintos <b>value</b> y el <b>checked</b> es opcional.</p>
+
+    <form action="Parte6-Forms.html">
+        <p>
+            Seleccionar servicios que utiliza:<br />
+            <input type="checkbox" name="opcion" value="youtube" checked="checked" /> Youtube <br />
+            <input type="checkbox" name="opcion" value="spotify" /> Spotify <br />
+            <input type="checkbox" name="opcion" value="prime" /> Amazon prime<br />
+            <input type="checkbox" name="opcion" value="netflix" /> Netflix
+        </p>
+    </form>
+    <hr />
+
+    <h2>Drop down list box</h2>
+    <p>
+        Permite elegir una opcion entre varias pero en tipo lista. Se habre con la etiqueta <b>select</b> y contiene dos o mas <b>option</b>.<br />
+        Dentro del select ingresaremos el <b>name</b> y dentro de option ingresaremos los <b>value</b>. Tambien podemos usar la propiedad <b>selected</b> para indicar uno predeterminado.
+    </p>
+
+    <form action="Parte6-Forms.html">
+        <p>
+            Seleccionar una opcion: <br />
+            <select name="opcionddl">
+                <option value="motorola">Motorola</option>
+                <option value="nokia">Nokia</option>
+                <option value="iphone" selected="selected">iPhone</option>
+                <option value="xiaomi">Xiaomi</option>
+                <option value="motorola">Motorola</option>
+            </select>
+        </p>
+    </form>
+    <hr />
+
+    <h2>Multiple select box</h2>
+    <p>
+        Es como un ddl, pero para elegir varias opciones. Se pueden utilizar los atributos <b>size</b> para mostrar la cantidad de opciones del total.<br />
+        En este ejemplo pondre size=3 en 5 en total.<br />
+        Y despues el atributo <b>multiple</b> que permite elegir varias opciones.
+    </p>
+    <form action="Parte6-Forms.html">
+        <p>Que tipo de peliculas te gustan?</p>
+        <select name="peliculas" size="3" multiple="multiple">
+            <option value="accion">Accion</option>
+            <option value="comedia">Comedia</option>
+            <option value="terror">Terror</option>
+            <option value="ficcion">Ciencia ficcion</option>
+            <option value="policial">Policial</option>
+        </select>
+    </form>
+    <hr />
+    <h2>File input box</h2>
+    <p>
+        Permite al usuario ingresar cualquier tipo de documento (imagen, video, mp3 o pdf).<br />
+        Se utilizara el tipo de dato <b>type="file"</b>. Seguido un <b>type="submit"</b> para ingresar el documento.
+    </p>
+    <form action="Parte6-Forms.html" method="post">
+        <p>Ingrese el PDF:</p>
+        <input type="file" name="pdf" /><br />
+        <input type="submit" value="Subir" />
+    </form>
+    <hr />
+
+    <h2>Submit button e image button</h2>
+    <p>El <b>type="submit"</b> se utiliza para mandar informacion al servidor. Se puede utilizar el atributo name, y el value al boton para que diga algo especifico.</p>
+    <form action="Parte6-Forms.html">
+        <p>Ingresar su mail:</p>
+        <input type="text" name="mail" />
+        <input type="submit" name="suscribirse" value="Enviar" />
+    </form>
+    <p>Se puede utilizar el <b>type="image"</b> para que el boton tenga algun diseño creado.</p>
+    <hr />
+
+    <h2>Labels para controles</h2>
+    <p>
+        Cada form deberia tener su propio <b>label</b> para mantener un orden sobre cualquier accion. <br />
+        En el siguiente ejemplo se utiliza para dos cosas
+    </p>
+    <ul>
+        <li>Envolver tanto la descripcion del texto como la entrada del formulario.</li>
+        <li>Mantener una separacion del control form, y utilizar la etiqueta <b>for</b> que a que form se refiere.</li>
+    </ul>
+    <h3>for</h3>
+    <p>
+        El <b>for</b> determina que form control esta atado al label. Notamos como los radio buttons usan un id. El valor del id<br />
+        identifica el elemntos de todos los demas que esten en la pagina web.<br />
+        El value del atributo for es igual id del form control al que esta "labeado". Esta tecnica puede utilizarse en cualquier form control.<br />
+        Cuando un label es utilizado con un checkbox o un radio button, el usuario puede hacer click tanto al form como al label y esto le da facilidad al usuario para seleccionar la opcion (por tener un area mas grande).<br />
+        La posicion del label es muy importante!
+    </p>
+    <p>Estos son los mejores lugares donde colocar labels dentro del form:</p>
+    <ul>
+        <li>
+            Encima o por la izquierda
+            <ul>
+                <li>Text inputs.</li>
+                <li>Text areas.</li>
+                <li>Select boxes.</li>
+                <li>file uploads</li>
+            </ul>
+        </li>
+        <li>
+            Por la derecha
+            <ul>
+                <li>Checkboxes individuales</li>
+                <li>radio buttons individuales</li>
+            </ul>
+        </li>
+    </ul>
+    <form action="Parte6-Forms.html">
+        <label>Edad: <input type="text" name="edad" /></label>
+        <br />
+        Genero:
+        <input id="femenino" type="radio" name="genero" value="f" />
+        <label for="femenino">Femenino</label>
+        <input id="masculino" type="radio" name="genero" value="m" />
+        <label for="masculino">Masculino</label>
+    </form>
+    <hr />
+
+    <h2>Agrupacion de elementos</h2>
+    <p>
+        Podemos agrupar controles dentro de un <b>fieldset</b>, muy utilizado para forms mas grandes.<br />
+        La mayoria de los navegadores encerrara con un borde todo lo que este dentro.<br />
+        Dentro de esta etiqueta tendremos que poner un <b>legend</b>, que sera un titulo para este contorno.
+    </p>
+    <form>
+        <fieldset>
+            <legend>Detalles de contacto</legend>
+            <label>Mail: <input type="text" name="mail" /></label><br />
+            <label>Telefono:<input type="tel" name="telefono" /></label><br />
+            <label>Nombre:<input type="text" name="nombre" /></label>
+        </fieldset>
+    </form>
+    <hr />
+    <h2>Validaciones</h2>
+    <p>Es un atributo que esta dentro del input, para asegurarse que el usuario coloque datos y no los deje vacios.</p>
+    <form method="post">
+        <label for="usuario">Usuario:</label>
+        <input type="text" name="usuario" required="required" /><br />
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" name="contraseña" required="required" />
+        <input type="submit" value="Ingresar" />
+    </form>
+    <hr />
+    <h2>Barra de busqueda</h2>
+    <p>
+        Utilizada para crear busquedas dentro de una base de datos. Se utiliza con <b>type="search"</b><br />
+        Se puede utilizar el atributo <b>placeholder</b> para mostrar un texto de ejemplo que desaparecera cuando el usuario haga click.
+    </p>
+    <form>
+        <label>Busqueda:</label>
+        <input type="search" name="busqueda" placeholder="Ingresar articulo" />
+        <input type="submit" value="Buscar" />
+    </form>
+</body>
+</html>

@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>CSS</title>
+    <link rel="stylesheet" type="text/css" href="Estilo.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Carattere&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h2>Indice</h2>
+        <nav>
+            <ul>
+                <li><a href="../Inicio.html">Parte 1 - Inicio</a></li>
+                <li><a href="../Parte2-Listas.html">Parte 2 - Listas</a></li>
+                <li><a href="../Parte3-Links.html">Parte 3 - Links</a></li>
+                <li><a href="../Parte4-Imagenes.html">Parte 4 - Imagenes</a></li>
+                <li><a href="../Parte5-Tablas.html">Parte 5 - Tablas</a></li>
+                <li><a href="../Parte6-Forms.html">Parte 6 - Forms</a></li>
+                <li><a href="../Parte7-MarcadoAdicional.html">Parte 7 - Marcado adicional</a></li>
+                <li><a href="../Parte8-Semantica.html">Parte 8 - Semantica HTML</a></li>
+                <li><a href="Parte9-CSS.html">Parte 9 - CSS </a></li>
+                <li><a href="Parte10-CSS-2.html">Parte 10 - CSS - 2</a></li>
+                <li><a href="Parte11-CSS-3.html">Parte 11 - CSS - 3</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr />
+    <h1>CSS</h1>
+    <h2>Linkear al HTML</h2>
+    <p>Para linkear un achivo .css, debemos hacerlo con la etiqueta <b>link</b> seguido de <b> rel="stylesheet" type="text/css" href="<i>ejemplo</i>.css"</b>, siempre fijarse en que carpeta esta el archivo.</p>
+    <hr />
+    <h2 id="id-estructurabasica">Estructura basica</h2>
+    <p>Cuando empezamos, debemos colocar primero el selector, luego una propiedad y un valor para cada propiedad:</p>
+    <p>
+        selector {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;propiedad: valor;<br />
+        }
+    </p>
+    <hr />
+    <h2 atributoinventado="salsa">Selectores</h2>
+    <p>Hay varios tipos de selectores:
+        <dl class="listaselectores">
+            <dt>Universal:</dt>
+            <dd>El universal se pone el signo <b>*</b> (asterisco), Abarca todos los elementos de la pagina web.</dd>
+            <dt>De tipo:</dt>
+            <dd>Seleccionamos por elementos. Buttons, h1, h2, etc.</dd>
+            <dt>Clases:</dt>
+            <dd>Para empezar debemos darle un atributo class a alguna etiqueta o elemento. <b>class="ejemplo"</b>. Y en css el selector empieza con un punto, seguido de la clase.<br />
+            Toda esta lista va a tener una clase.</dd>
+            <dt>ID:</dt>
+            <dd>Tal vez no queremos cambiar todos los elementos de tipo <b>p</b> para un mismo color, podemos darle un <b>id</b> para hacerlo en un parrafo especifico.<br />
+            En la hoja .css la semantica para seleccionarlo seria: <i><b>#id-ejemplo</b></i><br />
+            El id debe ser unico!</dd>
+            <dt>Por atributo:</dt>
+            <dd>No hay muchas explicaciones pero aprendi que se pueden inventar atributos a los elementos recien ahora ¯\_(ツ)_/¯<br />
+            En la hora css debemos poner el nombre del atributo entre <b> [atributoinventado="salsa"] </b></dd>
+            <dt>Descendiente:</dt>
+            <dd>Tal vez tenemos un parrafo dentro de un h2 (por ejemplo) y solo queremos modificar el formato del parrafo, pero no el elemnto h2 que lo contiene.<br />
+            A la vez no queremos modificar el formato de todos los parrafos!!! Esta es la mejor manera.<br />
+            En CSS primero ponemos el contenedor, y luego el contenido que queremos cambiar. EJEMPLO: <b>h2 p {...}</b><br />
+            Pero estos elementos tambien pueden ser cambiados por atributos, id, etc.<br />
+            En este caso, esta lista tiene una clase, pero solo cambie de color los terminos y no las definiciones.</dd>
+            <dt>Pseudo-clases:</dt>
+            <dd>Existen ya varias caracteristicas que podemos darle a los elementos, son algo asi como eventos.<br />
+            Se introducen con: <i><b>etiqueta:pseudo-clase</b></i>. Un ejemplo puede llegar a ser <b>hover</b>, que cambia de color la etiqueta cuando pasamos el mouse encima.</dd>
+        </dl>
+    </p>
+    <p><b>Tenemos que tener en cuenta que podemos mezclar varios tipos de selectores para ser cada vez mas especifico.</b></p>
+    <p>Un ejemplo puede ser:</p>
+    <p>
+        * {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:red;<br />
+        }<br />
+    </p>
+    <p>Tambien podemos (en vez del color textual) poner el valor hexadecimal.</p>
+    <button>Este boton deberia ser rojo POR SELECTOR DE TIPO y tiene el <b>hover</b></button>
+    <hr />
+    <h2>Especifidad</h2>
+    <p><b>Todo sigue un orden de jerarquia a la hora de escribir codigo CSS.</b></p>
+    <p><img src="Imagenes/JerarquiaCSS.png"  height="400" alt="Jerarquia" />Identidad es ID...</p>
+    <p><br />Podemos tener elementos con varios tipos de atributos, pero se van a regir por orden de jerarquia a la hora de darles estilos.l</p>
+    <hr />
+
+    <h2>Metodologia BEM</h2>
+    <p>Metodologia para evitar conflictos en jerarquia vamos a usar la metodologia BEM que se rige por clases. Hay mas metodologias pero antes que nada.<br />
+    Lo que vamos a hacer, es darle a un elemento una clase <b>class="noticias-form"</b>, <br />
+    y dentro de cada bloque de elemento seguiremos la misma clase siguiende otro nombre. <b>class="noticias-form__p"</b> o <b>class="noticias-form__input"</b>.<br />
+    Vemos como usamos doble guion bajo para separar los sectores de los elementos. <b>PERO SOLO POR UN SECTOR.</b> <br />
+    Y si por ejemplo tenemos varios inputs y uno en especifico queremos cambiar el color o etc. le pondremos doble guien medio con un nombre que queramos. <b>class="noticias-form__input--nombre"</b></p>
+
+    <div class="articulo-form">   
+        <h1 class="articulo-form__h1">Las abejas atacan de nuevo</h1>
+        <h2 class="articulo-form__h2">Se estima que un millon de abejas migraron<br />
+        hacia la ciudad de Tigre, San Fernando y Victoria</h2>
+        <p class="articulo-form__p">
+            Todavia no sabemos como ni por que, las abejas llegaron a las 8 AM del dia lunes 15 de febrero<br />
+            tapando la luz del sol tal cual ola de mar.
+        </p>
+        <p class="articulo-form__p--importante">
+            Si es recidente de la zona, se recomienda evacuar lo mas antes posible sin molestarlas ni mirarlas a los hojos.
+        </p>
+        <p class="articulo-form__p">
+            En los siguientes dias vamos a seguir informando sobre la situacion y ver como termina el trato entre <br />
+            las abejas y los intendentes de la zona.
+        </p>
+        <input type="text" class="articulo-form__input--nombre" placeholder="Ingrese su mail para mantenerse al tanto" width="200" />
+        <input type="button" class="articulo-form__input" value="Registrarse" />
+    </div>    
+
+    <hr />
+
+    <h2>Unidades de medida</h2>
+    <p>Existen 2 tipos de medidas, relativas (lo cual se portea bien a celulares) y fijas (Pixeles, mm, cm).<br /></p>
+    <h3>Tipografia</h3>
+    <p>Con la propiedad <b>font-size</b> podemos elegir la medida que queramos para la fuente de un texto.</p>
+    <p>
+        <dl>
+            <dt>
+                Medidas fijas:
+            </dt>
+            <dd>
+                <ul>
+                    <li>px (pixeles)</li>
+                    <li>cm</li>
+                    <li>mm</li>
+                    <li>pt (puntos)</li>
+                </ul>
+            </dd>
+            <dt>
+                Medidas relativas:
+            </dt>
+            <dd>
+                <ul>
+                    <li>em</li>
+                    <li>View Port
+                        <ul>
+                            <li>width que es el ancho: vw</li>
+                            <li>height que es el alto: vh</li>
+                        </ul>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+    </p>
+    <h3><b>em</b></h3>
+    <p>Un <i>em</i> equivale a 16 px (por defecto). Darle 5em a una fuente es en total 80px.<br />
+    Pero podemos elegir esa medida relativa por herencia. Y eso lo hacemos cambiando el valor de la font-size a la clase madre.<br />
+    <b>Pero</b> tambien puede ser la medida de cualquier propiedad que queramos cambiar.<br />
+    En la planilla CSS este ejemplo se puede ver en el articulo sobre las abejas.</p>
+    <h3><br />View Port</h3>
+    <p>Estas medidas ocupan todo el ancho y alto de la pantalla. Van del 0 al 100 que seria como porcentajes, pero no son porcentajes.</p>
+    <div class="dibujito">
+        <h1 class="dibujito__h1--1">asd</h1>
+    </div>
+    <p>Primero se deberia aplicar un normalizador * con padding:0px ; margin:0px. Pero no esta aplicado en esta pagina..</p>
+
+    <hr />
+    <h2>Propiedades de texto</h2>
+    <p>Estas son las propiedades mas comunes:</p>
+    <ul>
+        <li><b>font-size:</b> Que basicamente ya esta explicada mas arriba</li>
+        <li><b>font-family:</b> Esta es la tipografia</li>
+        <li><b>line-height:</b> Esto es espacio vertical que ocupa en total, por defecto tiene 1, con 2 ocuparia el doble de espacio PERO NO ES MAS GRANDE.</li>
+        <li><b>font-weight:</b> Este es el ancho que se estira la letra, se engorda. </li>
+    </ul>
+    <div class="otraletra-form">
+        <p class="otraletra-form__p">Tambien podemos utilizar tipografias externas, podemos buscarlas en Google Fonts, exportamos el link href y la modificamos con font-family (la coma en la propiedad sirve para tener una letra back up).</p>
+    </div>
+
+</body>
+</html>

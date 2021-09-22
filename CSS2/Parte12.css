@@ -1,0 +1,95 @@
+﻿.div1{
+    margin:auto;
+    margin-top:50px;
+    width:350px;
+    height:250px;
+    border:4px solid red;
+    background:grey;
+    overflow:auto;
+}
+
+.div2{  /*Pasa que la imagen se ajusta a la caja.*/
+    margin:auto;
+    margin-top:50px;
+    width:400px;
+    height:200px;
+    border:4px solid red;
+    background:grey;
+    overflow:hidden;  /*Con esto hacemos que el overflow se oculte.*/
+}
+
+.div2 img{
+    width:1000px; /*Con solo esto, vemos que la imagen se ajusta al div.*/
+    position:relative;
+    top:50px;
+    outline:5px solid blue;
+    left:50px;
+}
+
+.float {
+    margin:auto;
+    margin-top:50px;
+    width:300px;
+    height:300px;
+    border:5px solid red;
+    background:grey;
+    overflow:auto;
+    font-size:19px;
+    padding:5px;
+}
+
+.float img{
+    float:right;
+    width:180px;
+}
+
+.pelementos::after{
+    content:" Esto es un after";
+    color:red;
+}
+
+.pelementos::before{
+    content:"Esto es un before ";
+    color:green;
+}
+
+.objectfix{
+    margin:auto;
+    margin-top:25px;
+    margin-bottom:25px;
+    width:350px;
+    height:500px;
+
+}
+
+.objectfix-foto1{
+    height: 100%;
+    width: 100%;
+    border: 2px solid red;
+    object-fit:fill;
+}
+.objectfix-foto2 {
+    height: 100%;
+    width: 100%;
+    border: 2px solid red;
+    object-fit: contain;
+}
+.objectfix-foto3 {
+    height: 100%;
+    width: 100%;
+    border: 2px solid red;
+    object-fit: cover;
+    object-position:right;
+}
+.objectfix-foto4 {
+    height: 100%;
+    width: 100%;
+    border: 2px solid red;
+    object-fit: none;
+}
+.objectfix-foto5 {
+    height: 100%;
+    width: 100%;
+    border: 2px solid red;
+    object-fit: scale-down;
+}

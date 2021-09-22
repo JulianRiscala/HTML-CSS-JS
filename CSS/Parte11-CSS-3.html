@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <link rel="stylesheet" type="text/css" href="Estilo3.css" />
+</head>
+<body class="body-CSS3">
+    <div class="emergente">Esto es una prueba del fixed!</div>
+    <header>
+        <h2>Indice</h2>
+        <nav>
+            <ul>
+                <li><a href="Inicio.html">Parte 1 - Inicio</a></li>
+                <li><a href="Parte2-Listas.html">Parte 2 - Listas</a></li>
+                <li><a href="Parte3-Links.html">Parte 3 - Links</a></li>
+                <li><a href="Parte4-Imagenes.html">Parte 4 - Imagenes</a></li>
+                <li><a href="Parte5-Tablas.html">Parte 5 - Tablas</a></li>
+                <li><a href="Parte6-Forms.html">Parte 6 - Forms</a></li>
+                <li><a href="Parte7-MarcadoAdicional.html">Parte 7 - Marcado adicional</a></li>
+                <li><a href="Parte8-Semantica.html">Parte 8 - Semantica HTML</a></li>
+                <li><a href="Parte9-CSS.html">Parte 9 - CSS</a></li>
+                <li><a href="Parte10-CSS-2.html">Parte 10 - CSS p2</a></li>
+                <li><a href="Parte11-CSS-3.html">Parte 11 - CSS p3</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="sticky">Y esto es un ejemplo de sticky</div>
+    <hr />
+    <h2>Position relative</h2>
+    <p>
+        Debido a que HTML tiene un sistema de flujo, cada elemento va siguiente del otro.<br />
+        <b>- Relative:</b> nos permite "posicionar relativamente" nuestro elemento, y tenemos <b>top, bottom, left y right. Con su medida. </b>Entonces si nosotros ponemos position:relative; top:20px;<br />
+        Lo que va a pasar es que la caja se "mueve" 20 pixeles para abajo (desde la linea superior de la caja) pero en realidad esta en el mismo lugar que antes.<br />
+        <b>- Z index:</b> El valor mas alto del z index es lo que esta por delante de otra cosa con otro valor z index menor.<br />
+        Ya que la caja 2 tiene la propiedad position: relative y podemos "moverla", tambien podemos agregarle la misma propiedad a la caja 3 para que este por encima, y no termine pisada por la caja 2.<br />
+        Seria como decirle al navegador que primero se pinto la caja 2 en tal posicion, y despues la 3 por encima.<br />
+        Con la propiedad <b>z-index: </b> seguido de un numero, manejamos de mejor manera que caja se va a dibujar por encima.<br />
+        <br />
+        Cuando trabajamos con clases padres e hijos, osea clases dentro de elementos con clases, la cosa se dificulta porque el elemento hijo siempre va a estar por encima del elemento padre sea cual fuese el position:relative.<br />
+        Si nosotros queremos que la clase hijo quede por detras de la clase padre, tendremos que poner (en la clase hijo) el <b>index: -1;</b> y con eso queda atras.<br />
+        <a href="Parte11-CSS-3-Dibujo1.html">Ejemplo - Estilo 2</a>
+    </p>
+    <hr />
+    <h2>Position absolute.</h2>
+    <p>
+        Hay varias cosas que cambian cuando le damos a la caja 6 <b>position: absolute;</b>, es como si desapareciera la caja 7. El espacio ya no es asignado para la caja, entonces sube la caja 7, pero el index es menor a la caja 6.<br />
+        Si le ponemos <b>top:0</b> a la caja 6, subiria a la posicion 0 del viewport donde esta la caja, iria al principio de todo. Pero si no tiene el top:0, la posicion absoluta dependera de la caja contenedora.<br />
+        Tambien hay que tener encuenta que con position absolute, la caja se ajusta al contenido. PERO si nosotros le damos medidas con widht y height, nosotros le damos las medidas.<br />
+        <a href="Parte11-CSS-3-Bibujo2.html">Ejemplo - Estilo 3</a>
+    </p>
+    <hr />
+    <p>Con position absolute tambien podemos hacer contenedores para 4 esquinas. <br />
+    <a href="Parte11-CSS-3-Bibujo3.html">Ejemplo - estilo 5</a><br />
+    Aca dejo un video que puede llegar a explicar todo mejor: <a href="https://www.youtube.com/watch?v=P6UgYq3J3Qs&ab_channel=KevinPowell">Video</a></p>
+    <hr />
+    <h2>Position Fixed</h2>
+    <p>Con esta propiedad logramos hacer que un elemento se quede fijo en un lugar mientras scroleamos por la pantalla.<br />
+    Un ejemplo facil es crear un 2 divs, uno que sera el fijo y otro con texto. Al primero le damos un position fixed y un margin (o margin top) de -100px,<br />
+    y al body un padding-top de 100px, entonces no se tapa el texto y queda una ventana emergente con un texto siempre visible.</p>
+    <hr />
+    <h2>Position sticky</h2>
+    <p>Y con esto podemos hacer algo similar, pero puede estar en el medio del texto, y cuando se pasa con el scroll, queda pegado arriba.</p>
+    <p>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+    </p>
+
+</body>
+</html>
