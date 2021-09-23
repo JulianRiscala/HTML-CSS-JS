@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Flex</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/normalize.css">
+    <link rel="stylesheet" type="text/css" href="Parte14.css">
+
+</head>
+<body>
+    <h1>Flex</h1>
+    <p>
+        El <b>flex</b> es algo que nos permite maquetar mejor el sitio web.<br>
+        Flexbox tiene varios conceptos y equiere 2 cosas:
+        <ul>
+            <li>Un flex containter que se encarga de contener todos los items que esten dentro.</li>
+            <li>Y un flex item que se van a comportar como bloques.</li>
+        </ul>
+        Tenemos 2 ejes. El eje X es el <b>main axis</b> y el eje Y es el <b>cross axis</b> y ambos tienen un start y un end.
+        <ul>
+            <li>main-start</li>
+            <li>main-end</li>
+            <li>cross-start</li>
+            <li>cross-end</li>
+        </ul>
+        Supongamos que tenes un div con display:flex. Y dentro tenemos un p, un b y una img. Esos 3 elementos son considerados items de la caja flex.<br>
+        Pero si le sumamos un div, al div con flex. Y dentro del div hay un b, ese b no es un item de la caja con flexbox.<br>
+        <b>En conclusion: Solo son items de la caja flex si y solo si son hijos directos.</b><br>
+        Entonces los items que esten dentro del contenedor flex, solos se van a acomodar.
+        <br>
+        <p>
+            A continuacion tendre un div con class="flex-containter", y un display: flex;<br>
+            Si solo meto texto, la caja se comporta como un bloque. Pero cuando le meta dos divs que van a ser items, va a cambiar la movida.
+        </p>
+    <hr>
+    <div class="flex-containter">
+        <div class="flex-item">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et quod perferendis eum, ea enim ex iste magni nulla, nam laudantium facere consequuntur aut numquam odit eos vel autem amet! Ad. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad provident possimus aliquid nam ipsum quisquam obcaecati voluptate cumque natus accusamus assumenda itaque repudiandae quod ut distinctio, voluptatibus quos nesciunt illo! lorem
+        </div>
+        <div class="flex-item">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non atque sapiente dicta, itaque perspiciatis ex aliquam asperiores ipsa autem, voluptas, delectus porro voluptatibus provident quaerat est pariatur unde voluptate. Quae!
+        </div>
+    </div>
+    <hr>
+    <p>
+        <b>Podemos apreciar que en una caja flex, y un texto es mayor al otro. La linea horizontal se va a mantener estable para que se ajuste al contenido mientras que varia el eje Y.</b><br>
+        Y aca abajo tenemos 5 cajas, en el css si o si tenemos que darles un width para que se visualizen, a pesar del contenedor flex, si no le damos width no se van a apreciar.<br>
+        Notemos como al achicar la ventana, las cajas se van achicando a los costados pero manteniendo el mismo height. Pero tampoco van a ser mas grandes que el width maximo que les dimos.<br>
+    </p>
+    <hr>
+    <div class="flex2-containter">
+        <div class="flex2-item">
+        </div>
+        <div class="flex2-item"> 
+        </div>
+        <div class="flex2-item">
+        </div>
+        <div class="flex2-item"> 
+        </div>
+        <div class="flex2-item"> 
+        </div>
+    </div>
+    <hr> 
+    <h2>Propiedades para el flex-containter</h2>
+    <p>
+        Estas son propiedades que se aplican en el containter pero que van a afectar a los items.
+        <ul>
+            <li><b>flex-direction: <i>column/row</i></b> Cambia el sentido de los items. Pueden ser uno abajo del otro (column) o uno al lado del otro (row).<br>
+            Tambien podemos agregar un <b>-reverse</b> en ambas posibilidades para invertir el sentido que tienen originalmente. De derecha a izquierda o de abajo para arriba.</li>
+            <li><b>flex-wrap: wrap;</b> Esta propiedad hace que las cajas no cambien su width al achicar la ventana, hara que bajen sin cambiar su tamaño.<br>
+            Tambien podemos aplicar el <b>-reverse</b> para que suban en vez de bajar.<br>
+            El atrubuto <b>: nowrap</b> hara que no se modifiquen su tamaño y queden en la misma linea horizontal.</li>
+            <li>Podemos abreviar estas dos propiedades con <b>flex-flow:</b></li>
+            <li><b>Justify-Content:</b> Esta propiedade se utilizan para alinear los items en el <b>main axis.</b>
+                <ul>
+                    <li><b>center;</b> Centra el contenido al medio.</li>
+                    <li><b>space-around;</b> haria lo mismo que poner un margin auto a los items pero eso es mala practica. Para hacer ese mismo efecto utilizamos esta variable. El espacio entre el primer item y el ultimo, es la mitad de los del espacio entre item.</li>
+                    <li><b>space-between;</b> El espaciamiento se hace de tal manera que el espacio adyacente entre dos items es el mismo. El borde del comienzo principal y el borde del final principal se alinean al ras con el borde del primer y último item respectivamente.</li>
+                    <li><b>space-evenly;</b> hace que el espacio entre todos los espacios, entre items y a los bordes laterales del primero y el ultimo. sean iguales.</li>
+                </ul>
+            </li>
+            <li><b>Align-Items:</b> Estas propiedad se utiliza para alinear los items en el <b>cross axis.</b>
+                <br>Esta en particular es para cuando tenemos solo una linea de items.
+                <ul>
+                    <li><b>stretch;</b> pareciera que es por defecto. Pero si le sacamos el height a las cajas, se estiran hasta llenar el 100vh</li>
+                    <li><b>center;</b> alinea verticalmente en el medio.</li>
+                    <li><b>flex-enb;</b> los alinea abajo de todo.</li>
+                    <li><b>flex-start;</b> haria lo mismo que el stretch pero no lo estira hasta los 100vh. Se ajusta al contenido.</li>                    
+                </ul>
+            </li>
+            <li><b>Ahora el problema es cuando ahicamos la pantalla y tenemos mas de 2 lineas de items, Y NO QUEREMOS QUE LA SEGUNDA LINEA SE VAYA AL MEDIO.</b> Tendremos que usar la propiedad <b>align-content:</b>. Que se utilizan las mismas propiedades anteriores.</li>
+            <li>Podemos mezclar todo esto con un wrap-reverse para que en vez de que bajen los items, suban pero aun asi queremos que esten los items en la linea de abajo? usamos <b>BASELINE</b>.</li>
+        </ul>
+    </p>
+    <hr>
+    <hr>
+    <div class="flex3-containter">
+        <div class="flex3-item">
+        </div>
+    </div>
+    <hr> 
+    <h2>Propiedades para los flex-items</h2>
+    <p>
+        <ul>
+            <li><b>align-self:</b> se utilipa para alinearlas en el cross axis. Tenemos center, flex-end, etc.</li>
+            <li>Al aplicarle <b>margin</b> a un item, depediendo de que lado del margin sea auto, lo va mandar al extremo contrario. Osea que un margin-left: auto lo manda al extemo derecho.</li>
+            <li><b>flex-grow: 1</b> hace que la caja se estire para ocupar todo el ancho permitido. Y como minimo va a ser el espacio que le asignemos. Esta propiedad se puede convinar con el flex-wrap:wrap para que las cajas que bajen, utilicen todo el espacio.<br>
+            Esta propiedad podemos darsela a varias cajas distintas y personalizar cuanta proporcion de pantalla queremos darle a cada una.<br>
+            Supongamos que tenemos 3 cajas, y a una caja le damos de flow-grow 2, y a otra 1. Esto significa que <b>El espacio que sobra en la pantalla, se divide en 3 partes y se reparte dependiendo de los numeros que tengamos puestos.</b></li>
+            <li><b>flex-basis:</b> permite controlar el width de una caja, pero con mayor jerarquia que el atributo height.</li>
+            <li><b>flex-shrink:</b> especifica el factor de contracción de un flex item. Los flex items se encogerán para llenar el contenedor de acuerdo a su número flex-shrink , cuando el tamaño por defecto de los flex items sea mayor al de su contenedor flex container.</li>
+        </ul>
+    </p>
+</body>
+</html>
