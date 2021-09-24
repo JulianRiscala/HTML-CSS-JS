@@ -106,9 +106,11 @@
             <li>Al aplicarle <b>margin</b> a un item, depediendo de que lado del margin sea auto, lo va mandar al extremo contrario. Osea que un margin-left: auto lo manda al extemo derecho.</li>
             <li><b>flex-grow: 1</b> hace que la caja se estire para ocupar todo el ancho permitido. Y como minimo va a ser el espacio que le asignemos. Esta propiedad se puede convinar con el flex-wrap:wrap para que las cajas que bajen, utilicen todo el espacio.<br>
             Esta propiedad podemos darsela a varias cajas distintas y personalizar cuanta proporcion de pantalla queremos darle a cada una.<br>
-            Supongamos que tenemos 3 cajas, y a una caja le damos de flow-grow 2, y a otra 1. Esto significa que <b>El espacio que sobra en la pantalla, se divide en 3 partes y se reparte dependiendo de los numeros que tengamos puestos.</b></li>
+            Supongamos que tenemos 2 cajas, y a una caja le damos de flow-grow 2, y a otra 1. Esto significa que <b>El espacio que sobra en la pantalla, se divide en 3 partes y se reparte dependiendo de los numeros que tengamos puestos.</b></li>
             <li><b>flex-basis:</b> permite controlar el width de una caja, pero con mayor jerarquia que el atributo height.</li>
             <li><b>flex-shrink:</b> especifica el factor de contracción de un flex item. Los flex items se encogerán para llenar el contenedor de acuerdo a su número flex-shrink , cuando el tamaño por defecto de los flex items sea mayor al de su contenedor flex container.</li>
+            <li><b>flex:</b> es la abreviacion para flex-grow, flex-shrink y flex-basis. Pero para usarlo si o si necesita al menos un parametro. El grow.</li>
+            <li><b>order:</b> sirve para modificar el orden de los items en el main index. Obviamente si colocamos un row-reverse. Va a ser lo mismo pero de derecha a izquierda. El orden mas alto va hacia la izquierda.</li>
         </ul>
     </p>
 </body>

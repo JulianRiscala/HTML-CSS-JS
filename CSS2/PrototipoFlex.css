@@ -1,0 +1,49 @@
+.header-containter{
+    background-color: lightgray;
+    width: 100vw;
+    height: 110px;
+    border: 5px groove rgb(44, 15, 15);
+    display: flex;
+    overflow: hidden;
+
+}
+
+.header-datos{
+    font-family: 'Gothic A1', sans-serif;
+    flex-grow: 1;
+    border-right: 5px groove black;
+    text-align: center;
+    align-self: center;
+    padding:27px; /*Solucion al separador pero no es correcto.*/
+    overflow: hidden;
+    position:relative;
+}
+
+.datos-fondogris{
+    width: 600px;
+    height: 18px;
+    background-color: gray;
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 60px;
+}
+
+.header-logo{
+    flex-grow: 5;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    align-self:center;
+    margin-right: 120px;
+    position: relative;
+    text-align: right;
+}
+
+.logo-img{
+    position: absolute;
+}
+.logo-img img{
+    margin-top: -100px;
+    padding-left: 0px;
+    height: 250px;
+}
+

@@ -1,0 +1,49 @@
+.flex-container{
+    display: flex;
+    align-items: center; /*Centrado vertilmente*/
+    flex-wrap: wrap; /*Cuadno sea responsive, se desplaza*/
+    justify-content: center;
+    background-color: #666;
+    margin: 100px 40px;
+    padding: px;
+}
+
+.form{
+    min-width: 400px;
+    flex: 1;
+    text-align: center; /*Para que este en el centro de su espacio flex.*/
+    padding: 30px;
+}
+
+.form__input{
+    width: 100%;
+    padding: 8px;
+    margin:10px ;
+}
+
+.form textarea{
+    min-height: 200px; /*En el caso que le quiera dar mas lugar, puedo sacar margin y padding de los inputs*/
+}
+
+.form-img{
+    flex: 1;
+    display: flex;
+}
+
+.img-container{
+    text-align: center; /*Esto logra centrar el contenido*/
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.img-container img{
+    width: 100%;
+}
+
+/*.form-img img{ /*Con esto asi como esta, el efecto se aplica a la imagen. y puede quedar mal. ENTONCES CREAMOS UN DIV QUE CONTENGA A LA IMAGEN Y PODER APLICAR EFECTOS AL ITEM. NO A LA IMAGEN.
+    width: 70%;
+    margin: auto;  /*Puedo centrarlo con margin. Porque su padre tiene display: flex
+    border-radius: 40%;
+    background-color: #fff;
+    padding:20px;
+} */
