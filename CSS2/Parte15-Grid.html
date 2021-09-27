@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Grid</title>
+    <link rel="stylesheet" type="text/css" href="Parte15-Grid.css">
+</head>
+<body>
+    <h1>Gird</h1>
+    <p>
+        Permite trabajar en el layout en base a grillas.<br>
+        Tenemos que estudiar 6 conceptos.
+        <ul>
+            <li><b>Grid containter: </b>Es como el flex containter. Pero destinado a grillas.</li>
+            <li><b>Grid item:</b> Es todo lo que este dentro del grid conteinter. Es el hijo del container.</li>
+            <li><b>Grid cell:</b> Estas son las celdas que estan dentro del item, es hijo directo del grid item, y nieto del conteiner.</li>
+            <li><b>Grid Tracks (column y row):</b> Son las filas y las columnas. Grid trancks es la suma de filas y columnas.</li>
+            <li><b>Grid area:</b> Las areas las definimos nosotros, y tienen que ser consecutivas. Entonces conceptualmente, si o si son cuadradas o rectangulas.</li>
+            <li><b>Grid line (column line y row line):</b> Estas son las linas divisoras de lineas, o columnas.</li>
+        </ul>
+        Vamos con ejemplos.
+    </p>
+
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+    </div>
+
+    <h2>Propiedades para containers</h2>
+    <p>
+        <ul>
+            <li><b>Grid-template-rows: <i>Medida</i>;</b> Esto lo que hace es darle filas a la grilla. Sin esta propiedad, aunque parece que haya filas, se denominan grids implicitos. No se concideran filas todavia.<br>
+            Puede haber 9 elementos pero si solo aplicamos a 3 filas esta propiedad, solo va a haber 3 filas.</li>
+            <li><b>Grid-template-colums: <i>Medida</i>;</b> Y con esto le damos columnas a la grilla, funciona de la misma manera, como en el ejemplo de arriba, damos 3 medidas de rows, 3 medidas para columns y nos queda una grilla completa de 3x3.<br>
+            Podemos dar una unidad de medida a ambas propiedades que es <b>1fr</b> que seria algo parecido al flex-grow. Es dejar que que la columna o fila que tenga esta medida, el espacio sobrante de la pantalla. Se puede dar el fr a varias columnas o filas.<br>
+            Podemos colocar una funcion que es <b>repeat(<i>cantidad</i>,<i>parametro de medida</i>)</b> y esto nos evita tener que poner 3 veces 150px por ejemplo. Podemos pasarle otra medida, entonces va a repetir la X cantidad de veces las medidas que les pacemos.</li>
+            <li><b>grid-gap (O grid-column-gap o grid-row-gap):</b> Es una manera de dar espacio entre las celdas, pero no de las celdas de la grilla.</li>
+        </ul>
+    </p>
+    <br>
+    <h2>Propiedades para items</h2>
+    <p>
+        <ul>
+            <li><b>grid-row (grid-row-start y grid-row-end):<i>numero / numero</i> </b> Se utiliza para que una celda ocupe mas lugar que otras, colocando la linea donde empieza y la linea donde termina. Pero tambien empueja las siguientes celdas como se ve en el ejemplo.</li>
+            <li><b>grid-column (grid-column-start y grid-column-end): <i>numero / numero</i></b> Lo mismo que arriba. Hay que tener cuidado con esto porque se empiezan a descolocar todas las cajas!!!. Y otra variable que  podemos pasarle es <b>span</b><br>
+            Un ejemplo para span seria algo: 1 / span 3. Que quiere decir: Empeza en la fila o columna 1 y sumame 3 filas o columnas</li>
+        </ul>
+        <br>Vamos con otro ejemplo.
+    </p>
+
+    <div class="grid-container2">
+        <div class="grid-item2">1</div>
+        <div class="grid-item2">2</div>
+        <div class="grid-item2">3</div>
+        <div class="grid-item2">4</div>
+        <div class="grid-item2">5</div>
+        <div class="grid-item2">6</div>
+        <div class="grid-item2">7</div>
+        <div class="grid-item2">8</div>
+        <div class="grid-item2">9</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+body{
+    background: radial-gradient(circle,#fff,#bbb);
+    padding: 20px;
+}
+
+.grid-container{
+    display: grid; /*Pareciese que no hace nada. Pero lo que hace es crear una sola columna. Se comporta como elemento en bloque.*/
+    grid-template-rows: 150px 150px 150px; /*Esta es una manera de darle filas. Ahora hay 3 filas. Lo que sobras son grids implicitos.*/
+    grid-template-columns: /* 150px 150px 150px  o*/ repeat(3,150px); /*Y con esto, se completa la grilla.*/
+    border: 3px solid black;
+    padding: 3px;
+    grid-gap: 5px 5px;
+    background-color: gray;
+}
+
+.grid-item{
+    border:2px solid red;
+    background-color: rgb(59, 59, 59);
+    color:white;
+}
+
+.grid-item:first-child{  /* Esta es una manera de poder seleccionar el primer elemento, ya que hay varios de la misma clase. */
+    background-color: #900;
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+.grid-item:nth-child(2){ /*Esta es otra manera de poder seleccionar el elemento que queramos, ya que second-child no se puede usar.*/
+    background-color: rgb(41, 97, 49);
+    /* grid-column: 1 / 3; */ /*Esto hace que se descoloquen todas las cajas. Tendremos que poner otras variables*/
+    grid-column: 3/4; /*Entonces con esto, no se descolocan todas las cajas. Se puede jugar mucho con esto.*/
+}
+
+.grid-container2{
+    display: grid; /*Pareciese que no hace nada. Pero lo que hace es crear una sola columna. Se comporta como elemento en bloque.*/
+    grid-template-rows: 150px 150px 150px; /*Esta es una manera de darle filas. Ahora hay 3 filas. Lo que sobras son grids implicitos.*/
+    grid-template-columns: repeat(3,150px); /*Y con esto, se completa la grilla.*/
+    border: 3px solid black;
+    padding: 3px;
+    grid-gap: 5px 5px;
+    background-color: gray;
+}
+
+.grid-item2{
+    border:2px solid red;
+    background-color: rgb(59, 59, 59);
+    color:white;
+}
