@@ -1,6 +1,7 @@
 body{
     background: radial-gradient(circle,#fff,#bbb);
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .grid-container{
@@ -32,17 +33,84 @@ body{
 }
 
 .grid-container2{
+    height: 100vh;
+    width: 100%;
     display: grid; /*Pareciese que no hace nada. Pero lo que hace es crear una sola columna. Se comporta como elemento en bloque.*/
-    grid-template-rows: 150px 150px 150px; /*Esta es una manera de darle filas. Ahora hay 3 filas. Lo que sobras son grids implicitos.*/
-    grid-template-columns: repeat(3,150px); /*Y con esto, se completa la grilla.*/
+    grid-template-rows: auto  /* Auto tambien funciona  *//* 25% 25% 25% 25% */; /*Esta es una manera de darle filas. Ahora hay 3 filas. Lo que sobras son grids implicitos.*/
+                      /*Aca son 4 filas*/
+    grid-template-columns: 1fr 1fr 1fr 1fr; /*Y con esto, se completa la grilla.*/
     border: 3px solid black;
     padding: 3px;
-    grid-gap: 5px 5px;
     background-color: gray;
+    grid-template-areas: 
+    "header header header header" /* Si quiero dejar un espacio en blanco en alguna celda. Se coloca un punto en el area.*/
+    "body body body sidebar"
+    "body body body sidebar"
+    "footer footer footer footer";
 }
 
-.grid-item2{
-    border:2px solid red;
-    background-color: rgb(59, 59, 59);
-    color:white;
+
+.header{
+    background-color: yellow;
+    grid-area: header;
+    /* grid-column: 1/5; */
+}
+
+.body{
+    background-color: turquoise;
+    grid-area: body;
+    /* grid-area: 2/1/4/4; */
+/*     grid-column: 1/4;
+    grid-row: 2/4; */
+} 
+
+.sidebar{
+    background-color: violet;
+    grid-area: sidebar;
+    /* grid-row: 2/4; */
+}
+
+.footer{
+    background-color: tomato;
+    grid-area: footer;
+    /* grid-column: 1/5; */
+}
+
+.grid3-container{
+    display: grid;
+    height: 600px;
+    width: 100%;
+    background-color: #bbb;
+    grid-template-rows: repeat(3,minmax(100px,1fr));
+    /* grid-template-columns: repeat(2,minmax(100px,1fr)); */
+    grid-template-columns: repeat(3,minmax(100px,1fr));
+    grid-gap:2px
+}
+
+ [class^="grid3-item"]{
+    background-color:gray;
+    border: 2px solid red;
+} 
+/* .grid3-item1, .grid3-item8{
+    background-color: yellow;
+}
+.grid3-item2, .grid3-item7{
+    background-color: turquoise;
+}
+.grid3-item3, .grid3-item6{
+    background-color: violet;
+}
+.grid3-item4, .grid3-item5{
+    background-color: tomato;
+}    */
+
+
+@media screen and (max-width:600px) {
+    .grid-container2{
+        grid:1fr 1fr 1fr/repeat(3,1fr);
+        grid-template-areas: 
+        "header header sidebar"
+        "body body sidebar"
+        "footer footer sidebar";
+    }
 }

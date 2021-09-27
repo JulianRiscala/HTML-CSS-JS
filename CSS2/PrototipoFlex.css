@@ -1,4 +1,4 @@
-.header-containter{
+/* .header-containter{
     background-color: lightgray;
     width: 100vw;
     height: 110px;
@@ -14,7 +14,7 @@
     border-right: 5px groove black;
     text-align: center;
     align-self: center;
-    padding:27px; /*Solucion al separador pero no es correcto.*/
+    padding:27px; /*Solucion al separador pero no es correcto.
     overflow: hidden;
     position:relative;
 }
@@ -47,3 +47,54 @@
     height: 250px;
 }
 
+ */
+
+*{
+    padding: 0;
+    margin:0;
+    font-size: 22px;
+    color: white;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header, .body, .side, .footer{
+    padding: 10px;
+}
+
+.header{
+    background-color: rgb(87,24,69);
+    flex-basis: 60px;
+}
+
+.body{
+    background-color: rgb(144,12,62);
+    flex-grow: 3;
+}
+
+.side{
+    background-color: rgb(199,0,57);
+    flex-grow: 2;
+}
+
+.footer{
+    background-color: rgb(255,87,51);
+    flex-basis: 60px;
+}
+
+
+@media screen and (min-width:768px)
+{
+    .flex-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    body{
+        background-color: black;
+    }
+}

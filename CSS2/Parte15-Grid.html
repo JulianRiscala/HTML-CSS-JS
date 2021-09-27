@@ -44,6 +44,16 @@
             <li><b>grid-gap (O grid-column-gap o grid-row-gap):</b> Es una manera de dar espacio entre las celdas, pero no de las celdas de la grilla.</li>
         </ul>
     </p>
+    <h2>Propiedades tipo flex. Alineacion.</h2>
+    <p>
+        <ul>
+            <li><b>Justify-items:</b> Es lo que hace es alinear los items horizontalmente dentro de su area.</li>
+            <li><b>align-items:</b> Esto se utiliza para alinearlos verticalmente. Tambien esta el strecht, para estirarlos.</li>
+            <li>Las dos propiedades de arriba tambien pueden tener space-between, space evenly y space around.</li>
+            <li><b>justify-content:</b> Alinea las columnas en el caso de que no sean flexibles.</li>
+            <li><b>align-content:</b> Y esto alinea de rows el contenido verticalmente.</li>
+        </ul>
+    </p>
     <br>
     <h2>Propiedades para items</h2>
     <p>
@@ -51,20 +61,56 @@
             <li><b>grid-row (grid-row-start y grid-row-end):<i>numero / numero</i> </b> Se utiliza para que una celda ocupe mas lugar que otras, colocando la linea donde empieza y la linea donde termina. Pero tambien empueja las siguientes celdas como se ve en el ejemplo.</li>
             <li><b>grid-column (grid-column-start y grid-column-end): <i>numero / numero</i></b> Lo mismo que arriba. Hay que tener cuidado con esto porque se empiezan a descolocar todas las cajas!!!. Y otra variable que  podemos pasarle es <b>span</b><br>
             Un ejemplo para span seria algo: 1 / span 3. Que quiere decir: Empeza en la fila o columna 1 y sumame 3 filas o columnas</li>
+            <li>Y podemos resumir estas 2 o 4 parametros con <b>grid-area: <i>InicioR / InicioC / FinalR / FinalC</i></b>. Como vemos en las propiedades del item 2</li>
+            <li><b>order:</b> es como el z index para los grids items, se pueden poner en el orden que se quiera.</li>
         </ul>
-        <br>Vamos con otro ejemplo.
+        <h2>Para alinearlos tambien podemos usar estas propiedades</h2>
+        <ul>
+            <li><b>justify-self</b></li>
+            <li><b>align-self</b></li>
+        </ul>
+        <hr>
+        <br>Vamos con otro ejemplo.<br>
+        <b>Ahora vamos a hacer areas con grid, y dar una facilidad con css. + Un menu para celular al final del codigo css.</b>
     </p>
 
     <div class="grid-container2">
-        <div class="grid-item2">1</div>
-        <div class="grid-item2">2</div>
-        <div class="grid-item2">3</div>
-        <div class="grid-item2">4</div>
-        <div class="grid-item2">5</div>
-        <div class="grid-item2">6</div>
-        <div class="grid-item2">7</div>
-        <div class="grid-item2">8</div>
-        <div class="grid-item2">9</div>
+        <div class="header">Header</div>
+        <div class="body">Body</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="footer">Footer</div>
+
     </div>
+    <b>De esta manera podemos crear un lindo layout con Grids.</b>
+    <hr>
+    <h2>Flow del grids</h2>
+    <p>
+        Por defecto el flow de los grids es por filas. Pero puede ser por columnas con la propiedad: <b>grid-auto-flow: row o column</b>. Otro parametro es <b>dense</b> que su funcion es hacer que las celdas llenen los espacios vacios.<br>
+        Añadir elementos los sumaria al flow establecido.<br>
+        Hay casos en que por la manera que nosotros seteamos las filas y las columnas, puede haber celdas que queden apretadas, "celdas implicitas". Y existen propiedades para manipularlas:
+        <ul>
+            <li><b>grid-auto-columns:</b></li>
+            <li><b>grid-auto-rows:</b></li>
+        </ul>
+        Y les pasamos medidas.
+    </p>
+    <div class="grid3-container">
+        <div class="grid3-item1">1</div>
+        <div class="grid3-item2">2</div>
+        <div class="grid3-item3">3</div>
+        <div class="grid3-item4">4</div>
+        <div class="grid3-item5">5</div>
+        <div class="grid3-item6">6</div>
+        <div class="grid3-item7">7</div>
+        <div class="grid3-item8">8</div>
+        <div class="grid3-item9">9</div>
+<!--         <div class="grid3-item10">10</div> -->
+    </div>
+    <hr>
+    <h2>Minmax</h2>
+    <p>
+        Se puede usar las medidas minmax para dar parametros de medidas que sean minimas y maximas. Meto ejemplos en el ultimo div.<br>
+        Despues auto fill lo que va a hacer es meter la cantidad de columnas o filas que entren en base a los parametros de medidas. Ejemplo en el css.
+    </p>
 </body>
 </html>
