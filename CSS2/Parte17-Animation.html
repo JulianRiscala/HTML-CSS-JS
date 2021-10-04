@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="Parte17-Animation.css">
+</head>
+<body>
+    <h1>Animation</h1>
+    <p>Con animation podemos animar de mejor manera la pagina web en vez de usar transition.</p>
+    <h2>KeyFrames</h2>
+    <p>Deberemos primero definiar la animacion con <b>@keyframes <i>nombre</i></b>. Y definir un 0% con las propiedades iniciales y <br>
+    100% para definiar las propiedades que tendra el objeto o div al final. Podemos tambien usar cualquier porcentaje en el medio para definir otras propiedades.</p>
+    <h2>Propiedades</h2>
+    <p>Estas propiedades se introducen a la caja.</p>
+    <ul>
+        <li><b>animation-name: </b>aca colocamos el nombre a la animacion, la misma que esta seguida del @keyframe.</li>
+        <li><b>animation-duration: </b>el tiempo en segundos de lo que va a durar.</li>
+        <li><b>animation-iteration-count: </b>es el numero de veces que se va a repetir la animacoin, puede ser un numero finito o <b>infinite</b>.</li>
+        <li><b>animation-direction: </b> indica si la animacion debe retroceder hasta el inicio al final la secuencia o si debe comenzar desde el principio al llegar al llegar al final.<br>
+            Tenemos varios valores: <ul>
+                <li><b>normal;</b> es el valor por defecto, la animacion se reinicia al estado inicial.</li>
+                <li><b>alternate;</b> hace que la animacion invierte la direccion al terminal la secuencia. Todos los pasos de la animacion se ejecutan al revez.<br>
+                el count que determina si la iteracion es par o inpar comienza en 1.</li>
+                <li><b>reverse;</b> hace que cada ciclo de la animacion se produzca al revez.</li>
+                <li><b>alternate-reverse;</b> es el conjunto de los valores anteriores.</li>
+            </ul></li>
+        <li><b>animation-fill-mode: </b>especifica el modo en que una animacion aplica sus estilos, estableciendo su persistencia y estado final tras su ejecucion.<br>
+            Valores:<ul>
+                <li><b>forwards;</b> hace que el objeto sobre el que se le aplicara la animacion quedara con los valores y estiles que se le aplique el ultimo keyframe de la ejecucion de la animacion.</li>
+                <li><b>backwards;</b> la animacion aplicará los valores definidos en el primer keyframe tan pronto como se aplique al objeto.</li>
+                <li><b>both;</b> la animacion seguirá las reglas de las opciones forwads y backwards, extendiendo las propiedades de la animacion en ambas direcciones.</li>
+            </ul></li>
+        <li><b>animation-delay: </b>Atrasa la ejecucion de la animacion en X segundos.</li>
+        <li><b>animation-timing-function: cubic-bezier(x1, y1, x2, y2); </b> nos permite manejar el flujo de movimiento del objeto. <br>Es mas facil buscar en google ejemeplos de movimientos o algo que nos permita editarlo. </li>
+    </ul>
+    <div class="ejemplo1">
+        <div class="ejemplo1__caja"></div>
+    </div>
+</body>
+</html>

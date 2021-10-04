@@ -49,6 +49,9 @@
 
  */
 
+/*----------DISEÑO FLEX----------*/
+
+/*
 *{
     padding: 0;
     margin:0;
@@ -73,17 +76,22 @@
 
 .body{
     background-color: rgb(144,12,62);
-    flex-grow: 3;
+    flex-grow: 2;
+    flex-basis: 300px;
+    flex-shrink: 0;
 }
 
 .side{
     background-color: rgb(199,0,57);
-    flex-grow: 2;
+    flex-grow: 1;
+    flex-basis: 150px;
+    flex-shrink: 0;
 }
-
+ 
 .footer{
     background-color: rgb(255,87,51);
     flex-basis: 60px;
+    flex-shrink: 0;
 }
 
 
@@ -94,7 +102,113 @@
         flex-wrap: wrap;
     }
 
-    body{
-        background-color: black;
+    .body ,.side{
+        height: 530px;
     }
+
+    .body{
+        flex-grow: 4;
+    }
+    .side{
+        grid-row: 1;
+    }
+
+    .header{
+        flex-basis: 100%; /*Hace que ocupe todo el ancho
+        max-height: 60px;
+    }
+
+    .footer{
+        flex-basis: 100%;
+        max-height: 50px;
+        flex-shrink: 1;
+    }
+}  */
+
+
+
+*{
+    padding: 0;
+    margin:0;
+    font-size: 22px;
+    color: white;
+}
+
+.flex-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(1,10% 80% 10%);
+    height: 100vh;
+    background-color: gray;
+    grid-template-areas: 
+    "header header header header"
+    "body body body side"
+    "footer footer footer footer";
+
+}
+
+.header{
+    background-color: rgb(87,24,69);
+    grid-area: header;
+}   
+
+.body{
+    background-color: rgb(144,12,62);
+    grid-area: body;
+}
+
+.side{
+    background-color: rgb(199,0,57);
+    grid-area: side;
+}
+
+.footer{
+    background-color: rgb(255,87,51);
+    grid-area: footer;
+}
+
+
+@media screen and (max-width:750px){
+    *{
+        font-size: 40px;
+    }
+
+    .flex-container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(1,10% 60% 20% 10%);
+        height: 100vh;
+        background-color: gray;
+        grid-template-areas: 
+        "header header header header"
+        "body body body body"
+        "side side side side"
+        "footer footer footer footer";
+    
+    }
+
+    .header{
+        background-color: rgb(87,24,69);
+        /* grid-area: header; */
+        grid-row: 1/2;
+    }   
+    
+    .body{
+        background-color: rgb(144,12,62);
+        /* grid-area: body; */
+        grid-row: 2/3;
+    }
+    
+    .side{
+        background-color: rgb(199,0,57);
+        /* grid-area: side; */
+        grid-row: 3/4;
+    }
+    
+    .footer{
+        background-color: rgb(255,87,51);
+        /* grid-area: footer; */
+        grid-row: 4/5;
+    }
+    
 }

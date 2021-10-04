@@ -1,0 +1,48 @@
+
+*{
+    padding: 0;
+    margin:0;
+}
+
+.container{
+    background-color: slateblue;
+    padding: 30px;
+}
+
+.caja{
+    height: 80px;
+    width: 80px;
+    margin:20px;
+    border: 1px solid black;
+    background: springgreen;
+    
+    transition-property: left,background; /*all no es recomendable por recursos*/
+    transition-duration: 3s;
+    left:0;
+    position: relative; /*Si esto no se ejecuta el movimiento*/
+}
+
+.container:hover > .caja{
+    left: 80%;
+    background:rgb(155, 50, 50);
+}
+
+.caja:nth-child(1){
+    transition-timing-function: linear;
+}
+.caja:nth-child(2){
+    transition-timing-function: ease;
+}
+.caja:nth-child(3){
+    transition-timing-function: ease-in;
+}
+.caja:nth-child(4){
+    transition-timing-function: ease-out;
+
+}
+.caja:nth-child(5){
+    transition-timing-function: ease-in-out;
+}
+.caja:nth-child(6){
+    transition-timing-function: ease; /*Es por defecto*/
+}
